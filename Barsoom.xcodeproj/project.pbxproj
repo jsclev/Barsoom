@@ -616,6 +616,8 @@
 		52A22733265B881800E7208C /* Pigiarniq Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pigiarniq Bold.ttf"; sourceTree = "<group>"; };
 		52A22734265B881800E7208C /* Pigiarniq Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pigiarniq Light.ttf"; sourceTree = "<group>"; };
 		52A22735265B881800E7208C /* Pigiarniq Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pigiarniq Italic.ttf"; sourceTree = "<group>"; };
+		52A80D50265F2DBD00EEBA1E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		52A80D66265F2DD200EEBA1E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		52EC1A2E265DF1AC00F6347E /* Device.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Device.cpp; sourceTree = "<group>"; };
 		52EC1A2F265DF1AC00F6347E /* Device.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Device.hpp; sourceTree = "<group>"; };
 		52EC1A33265DFFD500F6347E /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
@@ -667,6 +669,8 @@
 		523140DA265A1B1800C5044C = {
 			isa = PBXGroup;
 			children = (
+				52A80D66265F2DD200EEBA1E /* .gitignore */,
+				52A80D50265F2DBD00EEBA1E /* README.md */,
 				523140E5265A1B1800C5044C /* Barsoom */,
 				523140F7265A1B1A00C5044C /* BarsoomTests */,
 				52314102265A1B1A00C5044C /* BarsoomUITests */,
