@@ -32,6 +32,12 @@
 		52504F21265B7DC00046FF9A /* libSDL2_ttf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52504F1E265B7DA30046FF9A /* libSDL2_ttf.a */; };
 		52504F2D265B7E880046FF9A /* libSDL2_image.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52504F2A265B7E6E0046FF9A /* libSDL2_image.a */; };
 		52826B62265B7FB70089A623 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52826B49265B7F980089A623 /* libSDL2.a */; };
+		528D7639265F3D1700B5C44D /* Colony.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 528D7637265F3D1700B5C44D /* Colony.cpp */; };
+		528D763A265F3D1700B5C44D /* Colony.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 528D7637265F3D1700B5C44D /* Colony.cpp */; };
+		528D763B265F3D1700B5C44D /* Colony.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 528D7637265F3D1700B5C44D /* Colony.cpp */; };
+		528D7653265F409E00B5C44D /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 528D7651265F409E00B5C44D /* Game.cpp */; };
+		528D7654265F409E00B5C44D /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 528D7651265F409E00B5C44D /* Game.cpp */; };
+		528D7655265F409E00B5C44D /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 528D7651265F409E00B5C44D /* Game.cpp */; };
 		52A22690265B84EA00E7208C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A2267A265B84EA00E7208C /* AudioToolbox.framework */; };
 		52A22692265B850900E7208C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A22691265B850900E7208C /* AVFoundation.framework */; };
 		52A22694265B851400E7208C /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A22693265B851400E7208C /* CoreAudio.framework */; };
@@ -473,6 +479,10 @@
 		52504F16265B7DA30046FF9A /* SDL_ttf.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL_ttf.xcodeproj; path = "../SDL2_ttf-2.0.15/Xcode-iOS/SDL_ttf.xcodeproj"; sourceTree = "<group>"; };
 		52504F22265B7E6E0046FF9A /* SDL_image.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL_image.xcodeproj; path = "../SDL2_image-2.0.5/Xcode-iOS/SDL_image.xcodeproj"; sourceTree = "<group>"; };
 		52826B30265B7F980089A623 /* SDL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL.xcodeproj; path = "../SDL2-2.0.14/Xcode/SDL/SDL.xcodeproj"; sourceTree = "<group>"; };
+		528D7637265F3D1700B5C44D /* Colony.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Colony.cpp; sourceTree = "<group>"; };
+		528D7638265F3D1700B5C44D /* Colony.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Colony.hpp; sourceTree = "<group>"; };
+		528D7651265F409E00B5C44D /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		528D7652265F409E00B5C44D /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		52A2267A265B84EA00E7208C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		52A22691265B850900E7208C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		52A22693265B851400E7208C /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
@@ -758,7 +768,13 @@
 			children = (
 				52314140265A2A0800C5044C /* Button.cpp */,
 				52314147265A2A0800C5044C /* Button.hpp */,
+				528D7637265F3D1700B5C44D /* Colony.cpp */,
+				528D7638265F3D1700B5C44D /* Colony.hpp */,
 				52314146265A2A0800C5044C /* constants.hpp */,
+				52EC1A2E265DF1AC00F6347E /* Device.cpp */,
+				52EC1A2F265DF1AC00F6347E /* Device.hpp */,
+				528D7651265F409E00B5C44D /* Game.cpp */,
+				528D7652265F409E00B5C44D /* Game.hpp */,
 				52314143265A2A0800C5044C /* Texture.cpp */,
 				52314148265A2A0800C5044C /* Texture.hpp */,
 				52314149265A2A0800C5044C /* Tile.cpp */,
@@ -767,8 +783,6 @@
 				5231413F265A2A0800C5044C /* TileLayer.hpp */,
 				52314142265A2A0800C5044C /* Timer.cpp */,
 				52314144265A2A0800C5044C /* Timer.hpp */,
-				52EC1A2E265DF1AC00F6347E /* Device.cpp */,
-				52EC1A2F265DF1AC00F6347E /* Device.hpp */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -1553,6 +1567,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				528D7653265F409E00B5C44D /* Game.cpp in Sources */,
 				52EC1A30265DF1AC00F6347E /* Device.cpp in Sources */,
 				52314150265A2A0800C5044C /* Texture.cpp in Sources */,
 				52314153265A2A0800C5044C /* TileLayer.cpp in Sources */,
@@ -1560,6 +1575,7 @@
 				5231414D265A2A0800C5044C /* Timer.cpp in Sources */,
 				5231415A265A2A2D00C5044C /* main.cpp in Sources */,
 				52314156265A2A0800C5044C /* Tile.cpp in Sources */,
+				528D7639265F3D1700B5C44D /* Colony.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1572,9 +1588,11 @@
 				52314154265A2A0800C5044C /* TileLayer.cpp in Sources */,
 				52EC1A31265DF1AC00F6347E /* Device.cpp in Sources */,
 				52314157265A2A0800C5044C /* Tile.cpp in Sources */,
+				528D763A265F3D1700B5C44D /* Colony.cpp in Sources */,
 				5231415B265A2A2D00C5044C /* main.cpp in Sources */,
 				523140F9265A1B1A00C5044C /* BarsoomTests.swift in Sources */,
 				5231414B265A2A0800C5044C /* Button.cpp in Sources */,
+				528D7654265F409E00B5C44D /* Game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1587,9 +1605,11 @@
 				52314155265A2A0800C5044C /* TileLayer.cpp in Sources */,
 				52EC1A32265DF1AC00F6347E /* Device.cpp in Sources */,
 				52314158265A2A0800C5044C /* Tile.cpp in Sources */,
+				528D763B265F3D1700B5C44D /* Colony.cpp in Sources */,
 				5231415C265A2A2D00C5044C /* main.cpp in Sources */,
 				52314104265A1B1A00C5044C /* BarsoomUITests.swift in Sources */,
 				5231414C265A2A0800C5044C /* Button.cpp in Sources */,
+				528D7655265F409E00B5C44D /* Game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
