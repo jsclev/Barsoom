@@ -1,5 +1,5 @@
-#ifndef CIV_TEXTURE_H
-#define CIV_TEXTURE_H
+#ifndef BARSOOM_TEXTURE_H
+#define BARSOOM_TEXTURE_H
 
 #include <string>
 #include <SDL.h>

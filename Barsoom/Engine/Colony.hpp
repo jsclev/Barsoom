@@ -1,5 +1,5 @@
-#ifndef BARSOOM_DEVICE_H
-#define BARSOOM_DEVICE_H
+#ifndef BARSOOM_COLONY_H
+#define BARSOOM_COLONY_H
 
 #include <SDL.h>
 #include "Device.hpp"

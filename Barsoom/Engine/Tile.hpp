@@ -1,5 +1,5 @@
-#ifndef CIV_TILE_H
-#define CIV_TILE_H
+#ifndef BARSOOM_TILE_H
+#define BARSOOM_TILE_H
 
 #include <SDL.h>
 #include <vector>

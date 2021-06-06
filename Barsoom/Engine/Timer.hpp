@@ -1,5 +1,5 @@
-#ifndef CIV_TIMER_H
-#define CIV_TIMER_H
+#ifndef BARSOOM_TIMER_H
+#define BARSOOM_TIMER_H
 
 #include <SDL.h>
 

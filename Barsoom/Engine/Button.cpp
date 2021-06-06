@@ -46,10 +46,6 @@ void Button::handleEvent(SDL_Event *e, std::vector<Tile> *tiles, SDL_Rect tileCl
             tiles->emplace_back(tile);
         }
     }
-
-    for (auto t : *tiles) {
-        cout << t.getFood() << endl;
-    }
 }
 
 void Button::render() {

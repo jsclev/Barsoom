@@ -1,5 +1,5 @@
-#ifndef CIV_TILELAYER_H
-#define CIV_TILELAYER_H
+#ifndef BARSOOM_TILELAYER_H
+#define BARSOOM_TILELAYER_H
 
 #include <SDL_render.h>
 #include "Texture.hpp"

@@ -1,6 +1,7 @@
-#ifndef CIV_CONSTANTS_H
-#define CIV_CONSTANTS_H
+#ifndef BARSOOM_CONSTANTS_H
+#define BARSOOM_CONSTANTS_H
 
+const char GAME_NAME[] = "Barsoom";
 const int SCREEN_FPS = 60;
 const int SCREEN_TICK_PER_FRAME = 1000 / SCREEN_FPS;
 

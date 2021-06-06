@@ -13,6 +13,7 @@
 #include "constants.hpp"
 #include "Button.hpp"
 #include "Game.hpp"
+#include "WindowManager.hpp"
 
 Game::Game() {
     
@@ -25,26 +26,15 @@ bool Game::init() {
         SDL_Log("SDL could not initialize! %s\n", SDL_GetError());
         success = false;
     } else {
-        if (!SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1")) {
-            SDL_Log("Warning: Linear texture filtering not enabled!");
-        }
-        
-        SDL_DisplayMode displayMode;
 
-        if (SDL_GetDesktopDisplayMode(0, &displayMode) == 0) {
-            this->gScreenRect.w = displayMode.w;
-            this->gScreenRect.h = displayMode.h;
-        }
         
-        SDL_Log("Device resolution: %d x %d\n", gScreenRect.w, gScreenRect.h);
+        WindowManager windowMgr;
+        gWindow = windowMgr.createWindow();
+        gScreenRect = windowMgr.getScreenRect();
+        windowMgr.getWindowMultiplier();
+        
+        SDL_Log("Screen dimensions are %i x %i\n", gScreenRect.w, gScreenRect.h);
 
-//        Uint32 flags = SDL_WINDOW_SHOWN | SDL_WINDOW_ALLOW_HIGHDPI;
-        gWindow = SDL_CreateWindow("SDL Tutorial",
-                                   SDL_WINDOWPOS_UNDEFINED,
-                                   SDL_WINDOWPOS_UNDEFINED,
-                                   0,
-                                   0,
-                                   SDL_WINDOW_FULLSCREEN_DESKTOP | SDL_WINDOW_ALLOW_HIGHDPI | SDL_WINDOW_RESIZABLE);
         if (gWindow == NULL) {
             SDL_Log( "Window could not be created! SDL Error: %s\n", SDL_GetError() );
             success = false;
@@ -301,7 +291,6 @@ void Game::run() {
 //                            gIconClips[FOOD_ICON]);
 
             SDL_Event e;
-//            SDL_Color textColor = {71, 26, 13, 255};
             SDL_Point touchLocation = { gScreenRect.w / 2, gScreenRect.h / 2 };
 
             Timer fpsTimer;
@@ -309,6 +298,8 @@ void Game::run() {
             std::stringstream timeText;
             int countedFrames = 0;
             fpsTimer.start();
+            
+            
 
             while (!quit) {
                 capTimer.start();
@@ -316,10 +307,6 @@ void Game::run() {
                 while (SDL_PollEvent(&e) != 0) {
                     if (e.type == SDL_QUIT) {
                         quit = true;
-                    }
-                    else if (e.type == SDL_FINGERDOWN) {
-                        touchLocation.x = e.tfinger.x * gScreenRect.w;
-                        touchLocation.y = e.tfinger.y * gScreenRect.h;
                     }
                     else if (e.type == SDL_FINGERMOTION) {
                         touchLocation.x = e.tfinger.x * gScreenRect.w;
@@ -338,8 +325,6 @@ void Game::run() {
                     avgFPS = 0;
                 }
 
-                timeText.str("Regenerate Map");
-
                 SDL_SetRenderDrawColor(gRenderer, 0x00, 0x00, 0x00, 0x00);
                 SDL_RenderClear(gRenderer);
 
@@ -347,12 +332,7 @@ void Game::run() {
                     tile.render();
                 }
 
-//                for (int i = 0; i < NUM_ICONS; i++) {
-//                    icons[i].render();
-//                }
-
                 button.render();
-                gFPSTextTexture.render(gRenderer, 118, 86);
                 SDL_RenderPresent(gRenderer);
                 ++countedFrames;
 

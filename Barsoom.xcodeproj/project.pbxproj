@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5212D285266B08890022951D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5212D284266B08890022951D /* Launch Screen.storyboard */; };
+		5212D288266B15FC0022951D /* WindowManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5212D286266B15FC0022951D /* WindowManager.cpp */; };
+		5212D289266B15FC0022951D /* WindowManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5212D286266B15FC0022951D /* WindowManager.cpp */; };
+		5212D28A266B15FC0022951D /* WindowManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5212D286266B15FC0022951D /* WindowManager.cpp */; };
 		523140EB265A1B1A00C5044C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523140EA265A1B1A00C5044C /* Assets.xcassets */; };
 		523140EE265A1B1A00C5044C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523140ED265A1B1A00C5044C /* Preview Assets.xcassets */; };
 		523140F9265A1B1A00C5044C /* BarsoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523140F8265A1B1A00C5044C /* BarsoomTests.swift */; };
@@ -29,9 +33,9 @@
 		5231415A265A2A2D00C5044C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52314159265A2A2D00C5044C /* main.cpp */; };
 		5231415B265A2A2D00C5044C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52314159265A2A2D00C5044C /* main.cpp */; };
 		5231415C265A2A2D00C5044C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52314159265A2A2D00C5044C /* main.cpp */; };
-		52504F21265B7DC00046FF9A /* libSDL2_ttf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52504F1E265B7DA30046FF9A /* libSDL2_ttf.a */; };
-		52504F2D265B7E880046FF9A /* libSDL2_image.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52504F2A265B7E6E0046FF9A /* libSDL2_image.a */; };
-		52826B62265B7FB70089A623 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52826B49265B7F980089A623 /* libSDL2.a */; };
+		5282B8D2266A0B5A008E0F26 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5282B8A5266A0ACD008E0F26 /* libSDL2.a */; };
+		5282B8D3266A0B5A008E0F26 /* libSDL2_image.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5282B8BF266A0AE9008E0F26 /* libSDL2_image.a */; };
+		5282B8D4266A0B5A008E0F26 /* libSDL2_ttf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5282B8CD266A0B03008E0F26 /* libSDL2_ttf.a */; };
 		528D7639265F3D1700B5C44D /* Colony.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 528D7637265F3D1700B5C44D /* Colony.cpp */; };
 		528D763A265F3D1700B5C44D /* Colony.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 528D7637265F3D1700B5C44D /* Colony.cpp */; };
 		528D763B265F3D1700B5C44D /* Colony.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 528D7637265F3D1700B5C44D /* Colony.cpp */; };
@@ -332,128 +336,145 @@
 			remoteGlobalIDString = 523140E2265A1B1800C5044C;
 			remoteInfo = Barsoom;
 		};
-		52504F1D265B7DA30046FF9A /* PBXContainerItemProxy */ = {
+		5282B89C266A0ACD008E0F26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52504F16265B7DA30046FF9A /* SDL_ttf.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BE48FD6E07AFA17000BB41DA;
-			remoteInfo = "libSDL_ttf-iOS";
-		};
-		52504F1F265B7DA30046FF9A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 52504F16265B7DA30046FF9A /* SDL_ttf.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AA53152E1FE1016F0025C9BE;
-			remoteInfo = "libSDL_ttf-tvOS";
-		};
-		52504F29265B7E6E0046FF9A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 52504F22265B7E6E0046FF9A /* SDL_image.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BE1FA74107AF4C45004B6283;
-			remoteInfo = "libSDL_image-iOS";
-		};
-		52504F2B265B7E6E0046FF9A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 52504F22265B7E6E0046FF9A /* SDL_image.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AA5314451FE0FA910025C9BE;
-			remoteInfo = "libSDL_image-tvOS";
-		};
-		52826B40265B7F980089A623 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 52826B30265B7F980089A623 /* SDL.xcodeproj */;
+			containerPortal = 5282B88C266A0ACC008E0F26 /* SDL.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BECDF66C0761BA81005FE872;
 			remoteInfo = Framework;
 		};
-		52826B42265B7F980089A623 /* PBXContainerItemProxy */ = {
+		5282B89E266A0ACD008E0F26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52826B30265B7F980089A623 /* SDL.xcodeproj */;
+			containerPortal = 5282B88C266A0ACC008E0F26 /* SDL.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A7D88B5423E2437C00DCD162;
 			remoteInfo = "Framework-iOS";
 		};
-		52826B44265B7F980089A623 /* PBXContainerItemProxy */ = {
+		5282B8A0266A0ACD008E0F26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52826B30265B7F980089A623 /* SDL.xcodeproj */;
+			containerPortal = 5282B88C266A0ACC008E0F26 /* SDL.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A7D88D1523E24BED00DCD162;
 			remoteInfo = "Framework-tvOS";
 		};
-		52826B46265B7F980089A623 /* PBXContainerItemProxy */ = {
+		5282B8A2266A0ACD008E0F26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52826B30265B7F980089A623 /* SDL.xcodeproj */;
+			containerPortal = 5282B88C266A0ACC008E0F26 /* SDL.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BECDF6B30761BA81005FE872;
 			remoteInfo = "Static Library";
 		};
-		52826B48265B7F980089A623 /* PBXContainerItemProxy */ = {
+		5282B8A4266A0ACD008E0F26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52826B30265B7F980089A623 /* SDL.xcodeproj */;
+			containerPortal = 5282B88C266A0ACC008E0F26 /* SDL.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A7D88E5423E24D3B00DCD162;
 			remoteInfo = "Static Library-iOS";
 		};
-		52826B4A265B7F980089A623 /* PBXContainerItemProxy */ = {
+		5282B8A6266A0ACD008E0F26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52826B30265B7F980089A623 /* SDL.xcodeproj */;
+			containerPortal = 5282B88C266A0ACC008E0F26 /* SDL.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A769B23D23E259AE00872273;
 			remoteInfo = "Static Library-tvOS";
 		};
-		52826B4C265B7F980089A623 /* PBXContainerItemProxy */ = {
+		5282B8A8266A0ACD008E0F26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52826B30265B7F980089A623 /* SDL.xcodeproj */;
+			containerPortal = 5282B88C266A0ACC008E0F26 /* SDL.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = DB31407717554B71006C0E22;
 			remoteInfo = "Shared Library";
 		};
-		52826B4E265B7F980089A623 /* PBXContainerItemProxy */ = {
+		5282B8AA266A0ACD008E0F26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52826B30265B7F980089A623 /* SDL.xcodeproj */;
+			containerPortal = 5282B88C266A0ACC008E0F26 /* SDL.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A75FCEB323E25AB700529352;
 			remoteInfo = "Shared Library-iOS";
 		};
-		52826B50265B7F980089A623 /* PBXContainerItemProxy */ = {
+		5282B8AC266A0ACD008E0F26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52826B30265B7F980089A623 /* SDL.xcodeproj */;
+			containerPortal = 5282B88C266A0ACC008E0F26 /* SDL.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A75FD06C23E25AC700529352;
 			remoteInfo = "Shared Library-tvOS";
 		};
-		52826B52265B7F980089A623 /* PBXContainerItemProxy */ = {
+		5282B8AE266A0ACD008E0F26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52826B30265B7F980089A623 /* SDL.xcodeproj */;
+			containerPortal = 5282B88C266A0ACC008E0F26 /* SDL.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BECDF6BE0761BA81005FE872;
 			remoteInfo = "Standard DMG";
 		};
-		52826B54265B7F980089A623 /* PBXContainerItemProxy */ = {
+		5282B8B0266A0ACD008E0F26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52826B30265B7F980089A623 /* SDL.xcodeproj */;
+			containerPortal = 5282B88C266A0ACC008E0F26 /* SDL.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A75FDB8C23E4C74400529352;
 			remoteInfo = hidapi;
 		};
-		52826B56265B7F980089A623 /* PBXContainerItemProxy */ = {
+		5282B8B2266A0ACD008E0F26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52826B30265B7F980089A623 /* SDL.xcodeproj */;
+			containerPortal = 5282B88C266A0ACC008E0F26 /* SDL.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A75FDB4923E399AC00529352;
 			remoteInfo = "hidapi-iOS";
 		};
-		52826B58265B7F980089A623 /* PBXContainerItemProxy */ = {
+		5282B8B4266A0ACD008E0F26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52826B30265B7F980089A623 /* SDL.xcodeproj */;
+			containerPortal = 5282B88C266A0ACC008E0F26 /* SDL.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A75FDB6E23E3A2C900529352;
 			remoteInfo = "hidapi-tvOS";
 		};
+		5282B8BE266A0AE9008E0F26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5282B8B6266A0AE9008E0F26 /* SDL_image.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE1FA74107AF4C45004B6283;
+			remoteInfo = "libSDL_image-iOS";
+		};
+		5282B8C0266A0AE9008E0F26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5282B8B6266A0AE9008E0F26 /* SDL_image.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AA5314451FE0FA910025C9BE;
+			remoteInfo = "libSDL_image-tvOS";
+		};
+		5282B8C2266A0AE9008E0F26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5282B8B6266A0AE9008E0F26 /* SDL_image.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52B9A1EC2660D0B400B1739F;
+			remoteInfo = SDL2_image;
+		};
+		5282B8CC266A0B03008E0F26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5282B8C4266A0B03008E0F26 /* SDL_ttf.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE48FD6E07AFA17000BB41DA;
+			remoteInfo = "libSDL_ttf-iOS";
+		};
+		5282B8CE266A0B03008E0F26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5282B8C4266A0B03008E0F26 /* SDL_ttf.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AA53152E1FE1016F0025C9BE;
+			remoteInfo = "libSDL_ttf-tvOS";
+		};
+		5282B8D0266A0B03008E0F26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5282B8C4266A0B03008E0F26 /* SDL_ttf.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52C504F02660BFA000887DF0;
+			remoteInfo = SDL_ttf;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5212D284266B08890022951D /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		5212D286266B15FC0022951D /* WindowManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WindowManager.cpp; sourceTree = "<group>"; };
+		5212D287266B15FC0022951D /* WindowManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WindowManager.hpp; sourceTree = "<group>"; };
 		523140E3265A1B1800C5044C /* Barsoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barsoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		523140EA265A1B1A00C5044C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		523140ED265A1B1A00C5044C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -476,9 +497,13 @@
 		52314148265A2A0800C5044C /* Texture.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Texture.hpp; sourceTree = "<group>"; };
 		52314149265A2A0800C5044C /* Tile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tile.cpp; sourceTree = "<group>"; };
 		52314159265A2A2D00C5044C /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		52504F16265B7DA30046FF9A /* SDL_ttf.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL_ttf.xcodeproj; path = "../SDL2_ttf-2.0.15/Xcode-iOS/SDL_ttf.xcodeproj"; sourceTree = "<group>"; };
-		52504F22265B7E6E0046FF9A /* SDL_image.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL_image.xcodeproj; path = "../SDL2_image-2.0.5/Xcode-iOS/SDL_image.xcodeproj"; sourceTree = "<group>"; };
-		52826B30265B7F980089A623 /* SDL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL.xcodeproj; path = "../SDL2-2.0.14/Xcode/SDL/SDL.xcodeproj"; sourceTree = "<group>"; };
+		5282B884266A03B0008E0F26 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		5282B886266A062F008E0F26 /* libSDL2_image.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2_image.a; path = lib/ios/libSDL2_image.a; sourceTree = "<group>"; };
+		5282B887266A062F008E0F26 /* libSDL2_ttf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2_ttf.a; path = lib/ios/libSDL2_ttf.a; sourceTree = "<group>"; };
+		5282B888266A062F008E0F26 /* libSDL2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2.a; path = lib/ios/libSDL2.a; sourceTree = "<group>"; };
+		5282B88C266A0ACC008E0F26 /* SDL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL.xcodeproj; path = "../SDL/SDL2-2.0.14/Xcode/SDL/SDL.xcodeproj"; sourceTree = "<group>"; };
+		5282B8B6266A0AE9008E0F26 /* SDL_image.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL_image.xcodeproj; path = "../SDL/SDL2_image-2.0.5/Xcode-iOS/SDL_image.xcodeproj"; sourceTree = "<group>"; };
+		5282B8C4266A0B03008E0F26 /* SDL_ttf.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL_ttf.xcodeproj; path = "../SDL/SDL2_ttf-2.0.15/Xcode-iOS/SDL_ttf.xcodeproj"; sourceTree = "<group>"; };
 		528D7637265F3D1700B5C44D /* Colony.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Colony.cpp; sourceTree = "<group>"; };
 		528D7638265F3D1700B5C44D /* Colony.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Colony.hpp; sourceTree = "<group>"; };
 		528D7651265F409E00B5C44D /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
@@ -639,9 +664,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52826B62265B7FB70089A623 /* libSDL2.a in Frameworks */,
-				52504F2D265B7E880046FF9A /* libSDL2_image.a in Frameworks */,
-				52504F21265B7DC00046FF9A /* libSDL2_ttf.a in Frameworks */,
+				5282B8D2266A0B5A008E0F26 /* libSDL2.a in Frameworks */,
+				5282B8D3266A0B5A008E0F26 /* libSDL2_image.a in Frameworks */,
+				5282B8D4266A0B5A008E0F26 /* libSDL2_ttf.a in Frameworks */,
 				52A22690265B84EA00E7208C /* AudioToolbox.framework in Frameworks */,
 				52A22692265B850900E7208C /* AVFoundation.framework in Frameworks */,
 				52A22696265B852300E7208C /* CoreGraphics.framework in Frameworks */,
@@ -681,14 +706,14 @@
 			children = (
 				52A80D66265F2DD200EEBA1E /* .gitignore */,
 				52A80D50265F2DBD00EEBA1E /* README.md */,
+				5282B8B6266A0AE9008E0F26 /* SDL_image.xcodeproj */,
+				5282B8C4266A0B03008E0F26 /* SDL_ttf.xcodeproj */,
+				5282B88C266A0ACC008E0F26 /* SDL.xcodeproj */,
 				523140E5265A1B1800C5044C /* Barsoom */,
 				523140F7265A1B1A00C5044C /* BarsoomTests */,
 				52314102265A1B1A00C5044C /* BarsoomUITests */,
 				5231413B265A1C0C00C5044C /* Frameworks */,
 				523140E4265A1B1800C5044C /* Products */,
-				52504F22265B7E6E0046FF9A /* SDL_image.xcodeproj */,
-				52504F16265B7DA30046FF9A /* SDL_ttf.xcodeproj */,
-				52826B30265B7F980089A623 /* SDL.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -711,6 +736,7 @@
 				523140EF265A1B1A00C5044C /* Info.plist */,
 				52314159265A2A2D00C5044C /* main.cpp */,
 				523140EC265A1B1A00C5044C /* Preview Content */,
+				5212D284266B08890022951D /* Launch Screen.storyboard */,
 			);
 			path = Barsoom;
 			sourceTree = "<group>";
@@ -744,6 +770,10 @@
 		5231413B265A1C0C00C5044C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5282B886266A062F008E0F26 /* libSDL2_image.a */,
+				5282B887266A062F008E0F26 /* libSDL2_ttf.a */,
+				5282B888266A062F008E0F26 /* libSDL2.a */,
+				5282B884266A03B0008E0F26 /* SDL2.framework */,
 				52EC1A33265DFFD500F6347E /* CoreServices.framework */,
 				52A226A9265B869C00E7208C /* MobileCoreServices.framework */,
 				52A226A7265B868600E7208C /* ImageIO.framework */,
@@ -783,44 +813,48 @@
 				5231413F265A2A0800C5044C /* TileLayer.hpp */,
 				52314142265A2A0800C5044C /* Timer.cpp */,
 				52314144265A2A0800C5044C /* Timer.hpp */,
+				5212D286266B15FC0022951D /* WindowManager.cpp */,
+				5212D287266B15FC0022951D /* WindowManager.hpp */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
 		};
-		52504F17265B7DA30046FF9A /* Products */ = {
+		5282B88D266A0ACC008E0F26 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52504F1E265B7DA30046FF9A /* libSDL2_ttf.a */,
-				52504F20265B7DA30046FF9A /* libSDL2_ttf.a */,
+				5282B89D266A0ACD008E0F26 /* SDL2.framework */,
+				5282B89F266A0ACD008E0F26 /* SDL2.framework */,
+				5282B8A1266A0ACD008E0F26 /* SDL2.framework */,
+				5282B8A3266A0ACD008E0F26 /* libSDL2.a */,
+				5282B8A5266A0ACD008E0F26 /* libSDL2.a */,
+				5282B8A7266A0ACD008E0F26 /* libSDL2.a */,
+				5282B8A9266A0ACD008E0F26 /* libSDL2.dylib */,
+				5282B8AB266A0ACD008E0F26 /* libSDL2.dylib */,
+				5282B8AD266A0ACD008E0F26 /* libSDL2.dylib */,
+				5282B8AF266A0ACD008E0F26 /* SDL2 */,
+				5282B8B1266A0ACD008E0F26 /* hidapi.framework */,
+				5282B8B3266A0ACD008E0F26 /* hidapi.framework */,
+				5282B8B5266A0ACD008E0F26 /* hidapi.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		52504F23265B7E6E0046FF9A /* Products */ = {
+		5282B8B7266A0AE9008E0F26 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52504F2A265B7E6E0046FF9A /* libSDL2_image.a */,
-				52504F2C265B7E6E0046FF9A /* libSDL2_image.a */,
+				5282B8BF266A0AE9008E0F26 /* libSDL2_image.a */,
+				5282B8C1266A0AE9008E0F26 /* libSDL2_image.a */,
+				5282B8C3266A0AE9008E0F26 /* SDL2_image.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		52826B31265B7F980089A623 /* Products */ = {
+		5282B8C5266A0B03008E0F26 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52826B41265B7F980089A623 /* SDL2.framework */,
-				52826B43265B7F980089A623 /* SDL2.framework */,
-				52826B45265B7F980089A623 /* SDL2.framework */,
-				52826B47265B7F980089A623 /* libSDL2.a */,
-				52826B49265B7F980089A623 /* libSDL2.a */,
-				52826B4B265B7F980089A623 /* libSDL2.a */,
-				52826B4D265B7F980089A623 /* libSDL2.dylib */,
-				52826B4F265B7F980089A623 /* libSDL2.dylib */,
-				52826B51265B7F980089A623 /* libSDL2.dylib */,
-				52826B53265B7F980089A623 /* SDL2 */,
-				52826B55265B7F980089A623 /* hidapi.framework */,
-				52826B57265B7F980089A623 /* hidapi.framework */,
-				52826B59265B7F980089A623 /* hidapi.framework */,
+				5282B8CD266A0B03008E0F26 /* libSDL2_ttf.a */,
+				5282B8CF266A0B03008E0F26 /* libSDL2_ttf.a */,
+				5282B8D1266A0B03008E0F26 /* SDL_ttf.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1133,16 +1167,16 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 52826B31265B7F980089A623 /* Products */;
-					ProjectRef = 52826B30265B7F980089A623 /* SDL.xcodeproj */;
+					ProductGroup = 5282B88D266A0ACC008E0F26 /* Products */;
+					ProjectRef = 5282B88C266A0ACC008E0F26 /* SDL.xcodeproj */;
 				},
 				{
-					ProductGroup = 52504F23265B7E6E0046FF9A /* Products */;
-					ProjectRef = 52504F22265B7E6E0046FF9A /* SDL_image.xcodeproj */;
+					ProductGroup = 5282B8B7266A0AE9008E0F26 /* Products */;
+					ProjectRef = 5282B8B6266A0AE9008E0F26 /* SDL_image.xcodeproj */;
 				},
 				{
-					ProductGroup = 52504F17265B7DA30046FF9A /* Products */;
-					ProjectRef = 52504F16265B7DA30046FF9A /* SDL_ttf.xcodeproj */;
+					ProductGroup = 5282B8C5266A0B03008E0F26 /* Products */;
+					ProjectRef = 5282B8C4266A0B03008E0F26 /* SDL_ttf.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1155,123 +1189,137 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		52504F1E265B7DA30046FF9A /* libSDL2_ttf.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSDL2_ttf.a;
-			remoteRef = 52504F1D265B7DA30046FF9A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		52504F20265B7DA30046FF9A /* libSDL2_ttf.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSDL2_ttf.a;
-			remoteRef = 52504F1F265B7DA30046FF9A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		52504F2A265B7E6E0046FF9A /* libSDL2_image.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSDL2_image.a;
-			remoteRef = 52504F29265B7E6E0046FF9A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		52504F2C265B7E6E0046FF9A /* libSDL2_image.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSDL2_image.a;
-			remoteRef = 52504F2B265B7E6E0046FF9A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		52826B41265B7F980089A623 /* SDL2.framework */ = {
+		5282B89D266A0ACD008E0F26 /* SDL2.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SDL2.framework;
-			remoteRef = 52826B40265B7F980089A623 /* PBXContainerItemProxy */;
+			remoteRef = 5282B89C266A0ACD008E0F26 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52826B43265B7F980089A623 /* SDL2.framework */ = {
+		5282B89F266A0ACD008E0F26 /* SDL2.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SDL2.framework;
-			remoteRef = 52826B42265B7F980089A623 /* PBXContainerItemProxy */;
+			remoteRef = 5282B89E266A0ACD008E0F26 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52826B45265B7F980089A623 /* SDL2.framework */ = {
+		5282B8A1266A0ACD008E0F26 /* SDL2.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SDL2.framework;
-			remoteRef = 52826B44265B7F980089A623 /* PBXContainerItemProxy */;
+			remoteRef = 5282B8A0266A0ACD008E0F26 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52826B47265B7F980089A623 /* libSDL2.a */ = {
+		5282B8A3266A0ACD008E0F26 /* libSDL2.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libSDL2.a;
-			remoteRef = 52826B46265B7F980089A623 /* PBXContainerItemProxy */;
+			remoteRef = 5282B8A2266A0ACD008E0F26 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52826B49265B7F980089A623 /* libSDL2.a */ = {
+		5282B8A5266A0ACD008E0F26 /* libSDL2.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libSDL2.a;
-			remoteRef = 52826B48265B7F980089A623 /* PBXContainerItemProxy */;
+			remoteRef = 5282B8A4266A0ACD008E0F26 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52826B4B265B7F980089A623 /* libSDL2.a */ = {
+		5282B8A7266A0ACD008E0F26 /* libSDL2.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libSDL2.a;
-			remoteRef = 52826B4A265B7F980089A623 /* PBXContainerItemProxy */;
+			remoteRef = 5282B8A6266A0ACD008E0F26 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52826B4D265B7F980089A623 /* libSDL2.dylib */ = {
+		5282B8A9266A0ACD008E0F26 /* libSDL2.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
 			path = libSDL2.dylib;
-			remoteRef = 52826B4C265B7F980089A623 /* PBXContainerItemProxy */;
+			remoteRef = 5282B8A8266A0ACD008E0F26 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52826B4F265B7F980089A623 /* libSDL2.dylib */ = {
+		5282B8AB266A0ACD008E0F26 /* libSDL2.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
 			path = libSDL2.dylib;
-			remoteRef = 52826B4E265B7F980089A623 /* PBXContainerItemProxy */;
+			remoteRef = 5282B8AA266A0ACD008E0F26 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52826B51265B7F980089A623 /* libSDL2.dylib */ = {
+		5282B8AD266A0ACD008E0F26 /* libSDL2.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
 			path = libSDL2.dylib;
-			remoteRef = 52826B50265B7F980089A623 /* PBXContainerItemProxy */;
+			remoteRef = 5282B8AC266A0ACD008E0F26 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52826B53265B7F980089A623 /* SDL2 */ = {
+		5282B8AF266A0ACD008E0F26 /* SDL2 */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = SDL2;
-			remoteRef = 52826B52265B7F980089A623 /* PBXContainerItemProxy */;
+			remoteRef = 5282B8AE266A0ACD008E0F26 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52826B55265B7F980089A623 /* hidapi.framework */ = {
+		5282B8B1266A0ACD008E0F26 /* hidapi.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = hidapi.framework;
-			remoteRef = 52826B54265B7F980089A623 /* PBXContainerItemProxy */;
+			remoteRef = 5282B8B0266A0ACD008E0F26 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52826B57265B7F980089A623 /* hidapi.framework */ = {
+		5282B8B3266A0ACD008E0F26 /* hidapi.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = hidapi.framework;
-			remoteRef = 52826B56265B7F980089A623 /* PBXContainerItemProxy */;
+			remoteRef = 5282B8B2266A0ACD008E0F26 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52826B59265B7F980089A623 /* hidapi.framework */ = {
+		5282B8B5266A0ACD008E0F26 /* hidapi.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = hidapi.framework;
-			remoteRef = 52826B58265B7F980089A623 /* PBXContainerItemProxy */;
+			remoteRef = 5282B8B4266A0ACD008E0F26 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5282B8BF266A0AE9008E0F26 /* libSDL2_image.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSDL2_image.a;
+			remoteRef = 5282B8BE266A0AE9008E0F26 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5282B8C1266A0AE9008E0F26 /* libSDL2_image.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSDL2_image.a;
+			remoteRef = 5282B8C0266A0AE9008E0F26 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5282B8C3266A0AE9008E0F26 /* SDL2_image.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SDL2_image.framework;
+			remoteRef = 5282B8C2266A0AE9008E0F26 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5282B8CD266A0B03008E0F26 /* libSDL2_ttf.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSDL2_ttf.a;
+			remoteRef = 5282B8CC266A0B03008E0F26 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5282B8CF266A0B03008E0F26 /* libSDL2_ttf.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSDL2_ttf.a;
+			remoteRef = 5282B8CE266A0B03008E0F26 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5282B8D1266A0B03008E0F26 /* SDL_ttf.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SDL_ttf.framework;
+			remoteRef = 5282B8D0266A0B03008E0F26 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1284,6 +1332,7 @@
 				52A228D1265C41AB00E7208C /* painted_terrain_tiles_basic_256x384_sheet.png in Resources */,
 				52EC1A36265EB51500F6347E /* bg2.png in Resources */,
 				523140EE265A1B1A00C5044C /* Preview Assets.xcassets in Resources */,
+				5212D285266B08890022951D /* Launch Screen.storyboard in Resources */,
 				523140EB265A1B1A00C5044C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1574,6 +1623,7 @@
 				5231414A265A2A0800C5044C /* Button.cpp in Sources */,
 				5231414D265A2A0800C5044C /* Timer.cpp in Sources */,
 				5231415A265A2A2D00C5044C /* main.cpp in Sources */,
+				5212D288266B15FC0022951D /* WindowManager.cpp in Sources */,
 				52314156265A2A0800C5044C /* Tile.cpp in Sources */,
 				528D7639265F3D1700B5C44D /* Colony.cpp in Sources */,
 			);
@@ -1585,6 +1635,7 @@
 			files = (
 				5231414E265A2A0800C5044C /* Timer.cpp in Sources */,
 				52314151265A2A0800C5044C /* Texture.cpp in Sources */,
+				5212D289266B15FC0022951D /* WindowManager.cpp in Sources */,
 				52314154265A2A0800C5044C /* TileLayer.cpp in Sources */,
 				52EC1A31265DF1AC00F6347E /* Device.cpp in Sources */,
 				52314157265A2A0800C5044C /* Tile.cpp in Sources */,
@@ -1602,6 +1653,7 @@
 			files = (
 				5231414F265A2A0800C5044C /* Timer.cpp in Sources */,
 				52314152265A2A0800C5044C /* Texture.cpp in Sources */,
+				5212D28A266B15FC0022951D /* WindowManager.cpp in Sources */,
 				52314155265A2A0800C5044C /* TileLayer.cpp in Sources */,
 				52EC1A32265DF1AC00F6347E /* Device.cpp in Sources */,
 				52314158265A2A0800C5044C /* Tile.cpp in Sources */,
@@ -1767,11 +1819,24 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Barsoom/Preview Content\"";
 				DEVELOPMENT_TEAM = SNJW4KBXLV;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"/Users/john/projects/SDL/SDL2-2.0.14/include",
+					"/Users/john/projects/SDL/SDL2_image-2.0.5",
+					"/Users/john/projects/SDL/SDL2_ttf-2.0.15",
+				);
 				INFOPLIST_FILE = Barsoom/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib/ios",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zippyzen.Barsoom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1789,11 +1854,24 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Barsoom/Preview Content\"";
 				DEVELOPMENT_TEAM = SNJW4KBXLV;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"/Users/john/projects/SDL/SDL2-2.0.14/include",
+					"/Users/john/projects/SDL/SDL2_image-2.0.5",
+					"/Users/john/projects/SDL/SDL2_ttf-2.0.15",
+				);
 				INFOPLIST_FILE = Barsoom/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib/ios",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zippyzen.Barsoom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
