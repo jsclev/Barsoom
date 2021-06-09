@@ -13,7 +13,8 @@
 #include "constants.hpp"
 #include "Button.hpp"
 #include "Game.hpp"
-#include "WindowManager.hpp"
+#include "Device.hpp"
+#include "BaseMap.hpp"
 
 Game::Game() {
     
@@ -26,15 +27,9 @@ bool Game::init() {
         SDL_Log("SDL could not initialize! %s\n", SDL_GetError());
         success = false;
     } else {
-
+        Device device(gRenderer);
+        gWindow = device.createWindow();
         
-        WindowManager windowMgr;
-        gWindow = windowMgr.createWindow();
-        gScreenRect = windowMgr.getScreenRect();
-        windowMgr.getWindowMultiplier();
-        
-        SDL_Log("Screen dimensions are %i x %i\n", gScreenRect.w, gScreenRect.h);
-
         if (gWindow == NULL) {
             SDL_Log( "Window could not be created! SDL Error: %s\n", SDL_GetError() );
             success = false;
@@ -44,8 +39,6 @@ bool Game::init() {
             SDL_Log("Window could not be created! SDL Error: %s\n", SDL_GetError());
             success = false;
         } else {
-//            SDL_SetWindowFullscreen(gWindow, SDL_WINDOW_FULLSCREEN_DESKTOP);
-
             gRenderer = SDL_CreateRenderer(gWindow, -1, SDL_RENDERER_ACCELERATED);
             if (gRenderer == nullptr) {
                 SDL_Log("Renderer could not be created! SDL Error: %s\n", SDL_GetError());
@@ -53,7 +46,7 @@ bool Game::init() {
             } else {
                 SDL_SetRenderDrawColor(gRenderer, 0x00, 0x00, 0x00, 0x00);
 
-                int imgFlags = IMG_INIT_PNG;
+                int imgFlags = IMG_INIT_PNG | IMG_INIT_JPG;
                 if (!(IMG_Init(imgFlags) & imgFlags)) {
                     SDL_Log("SDL_image Error: %s\n", IMG_GetError());
                     success = false;
@@ -273,6 +266,10 @@ void Game::run() {
             bool quit = false;
             std::vector<TileLayer> v;
             std::vector<Tile> tiles;
+            Device device(gRenderer);
+            BaseMap baseMap(gRenderer);
+            
+            baseMap.setScreenRect(device.getScreenRect());
 
             Button button = Button(gRenderer,
                                    &gSpritesTexture,
@@ -299,7 +296,7 @@ void Game::run() {
             int countedFrames = 0;
             fpsTimer.start();
             
-            
+            SDL_SetRenderDrawColor(gRenderer, 0x00, 0x00, 0x00, 0x00);
 
             while (!quit) {
                 capTimer.start();
@@ -318,6 +315,13 @@ void Game::run() {
                         
                         button.handleEvent(&e, &tiles, gTileClips);
                     }
+                    else if (e.type == SDL_WINDOWEVENT) {
+                        if (e.window.event == SDL_WINDOWEVENT_SIZE_CHANGED) {
+                            baseMap.setScreenRect(device.getScreenRect());
+//                            gScreenRect.w = e.window.data1;
+//                            gScreenRect.h = e.window.data2;
+                        }
+                    }
                 }
 
                 float avgFPS = countedFrames / (fpsTimer.getTicks() / 1000.f);
@@ -325,15 +329,14 @@ void Game::run() {
                     avgFPS = 0;
                 }
 
-                SDL_SetRenderDrawColor(gRenderer, 0x00, 0x00, 0x00, 0x00);
                 SDL_RenderClear(gRenderer);
-
-                for (auto tile: tiles) {
-                    tile.render();
-                }
-
-                button.render();
+//                for (auto tile: tiles) {
+//                    tile.render();
+//                }
+                baseMap.render();
+//                button.render();
                 SDL_RenderPresent(gRenderer);
+                
                 ++countedFrames;
 
                 int frameTicks = capTimer.getTicks();

@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5212D285266B08890022951D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5212D284266B08890022951D /* Launch Screen.storyboard */; };
-		5212D288266B15FC0022951D /* WindowManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5212D286266B15FC0022951D /* WindowManager.cpp */; };
-		5212D289266B15FC0022951D /* WindowManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5212D286266B15FC0022951D /* WindowManager.cpp */; };
-		5212D28A266B15FC0022951D /* WindowManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5212D286266B15FC0022951D /* WindowManager.cpp */; };
+		5212D288266B15FC0022951D /* Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5212D286266B15FC0022951D /* Device.cpp */; };
+		5212D289266B15FC0022951D /* Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5212D286266B15FC0022951D /* Device.cpp */; };
+		5212D28A266B15FC0022951D /* Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5212D286266B15FC0022951D /* Device.cpp */; };
 		523140EB265A1B1A00C5044C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523140EA265A1B1A00C5044C /* Assets.xcassets */; };
 		523140EE265A1B1A00C5044C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523140ED265A1B1A00C5044C /* Preview Assets.xcassets */; };
 		523140F9265A1B1A00C5044C /* BarsoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523140F8265A1B1A00C5044C /* BarsoomTests.swift */; };
@@ -312,13 +312,13 @@
 		52A228B4265B881900E7208C /* Pigiarniq Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52A22735265B881800E7208C /* Pigiarniq Italic.ttf */; };
 		52A228B5265B881900E7208C /* Pigiarniq Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52A22735265B881800E7208C /* Pigiarniq Italic.ttf */; };
 		52A228D1265C41AB00E7208C /* painted_terrain_tiles_basic_256x384_sheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A226B3265B881800E7208C /* painted_terrain_tiles_basic_256x384_sheet.png */; };
-		52EC1A30265DF1AC00F6347E /* Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52EC1A2E265DF1AC00F6347E /* Device.cpp */; };
-		52EC1A31265DF1AC00F6347E /* Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52EC1A2E265DF1AC00F6347E /* Device.cpp */; };
-		52EC1A32265DF1AC00F6347E /* Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52EC1A2E265DF1AC00F6347E /* Device.cpp */; };
 		52EC1A34265DFFD500F6347E /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EC1A33265DFFD500F6347E /* CoreServices.framework */; };
 		52EC1A36265EB51500F6347E /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 52EC1A35265EB51500F6347E /* bg2.png */; };
 		52EC1A37265EB51500F6347E /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 52EC1A35265EB51500F6347E /* bg2.png */; };
 		52EC1A38265EB51500F6347E /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 52EC1A35265EB51500F6347E /* bg2.png */; };
+		52F37832266E5BD40011D9C6 /* BaseMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52F37830266E5BD40011D9C6 /* BaseMap.cpp */; };
+		52F37833266E5BD40011D9C6 /* BaseMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52F37830266E5BD40011D9C6 /* BaseMap.cpp */; };
+		52F37834266E5BD40011D9C6 /* BaseMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52F37830266E5BD40011D9C6 /* BaseMap.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -473,8 +473,8 @@
 
 /* Begin PBXFileReference section */
 		5212D284266B08890022951D /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		5212D286266B15FC0022951D /* WindowManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WindowManager.cpp; sourceTree = "<group>"; };
-		5212D287266B15FC0022951D /* WindowManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WindowManager.hpp; sourceTree = "<group>"; };
+		5212D286266B15FC0022951D /* Device.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Device.cpp; sourceTree = "<group>"; };
+		5212D287266B15FC0022951D /* Device.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Device.hpp; sourceTree = "<group>"; };
 		523140E3265A1B1800C5044C /* Barsoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barsoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		523140EA265A1B1A00C5044C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		523140ED265A1B1A00C5044C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -653,10 +653,10 @@
 		52A22735265B881800E7208C /* Pigiarniq Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pigiarniq Italic.ttf"; sourceTree = "<group>"; };
 		52A80D50265F2DBD00EEBA1E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		52A80D66265F2DD200EEBA1E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		52EC1A2E265DF1AC00F6347E /* Device.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Device.cpp; sourceTree = "<group>"; };
-		52EC1A2F265DF1AC00F6347E /* Device.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Device.hpp; sourceTree = "<group>"; };
 		52EC1A33265DFFD500F6347E /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		52EC1A35265EB51500F6347E /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
+		52F37830266E5BD40011D9C6 /* BaseMap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BaseMap.cpp; sourceTree = "<group>"; };
+		52F37831266E5BD40011D9C6 /* BaseMap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BaseMap.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -796,13 +796,13 @@
 		5231413E265A2A0800C5044C /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				52F37830266E5BD40011D9C6 /* BaseMap.cpp */,
+				52F37831266E5BD40011D9C6 /* BaseMap.hpp */,
 				52314140265A2A0800C5044C /* Button.cpp */,
 				52314147265A2A0800C5044C /* Button.hpp */,
 				528D7637265F3D1700B5C44D /* Colony.cpp */,
 				528D7638265F3D1700B5C44D /* Colony.hpp */,
 				52314146265A2A0800C5044C /* constants.hpp */,
-				52EC1A2E265DF1AC00F6347E /* Device.cpp */,
-				52EC1A2F265DF1AC00F6347E /* Device.hpp */,
 				528D7651265F409E00B5C44D /* Game.cpp */,
 				528D7652265F409E00B5C44D /* Game.hpp */,
 				52314143265A2A0800C5044C /* Texture.cpp */,
@@ -813,8 +813,8 @@
 				5231413F265A2A0800C5044C /* TileLayer.hpp */,
 				52314142265A2A0800C5044C /* Timer.cpp */,
 				52314144265A2A0800C5044C /* Timer.hpp */,
-				5212D286266B15FC0022951D /* WindowManager.cpp */,
-				5212D287266B15FC0022951D /* WindowManager.hpp */,
+				5212D286266B15FC0022951D /* Device.cpp */,
+				5212D287266B15FC0022951D /* Device.hpp */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -1617,14 +1617,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				528D7653265F409E00B5C44D /* Game.cpp in Sources */,
-				52EC1A30265DF1AC00F6347E /* Device.cpp in Sources */,
 				52314150265A2A0800C5044C /* Texture.cpp in Sources */,
 				52314153265A2A0800C5044C /* TileLayer.cpp in Sources */,
 				5231414A265A2A0800C5044C /* Button.cpp in Sources */,
 				5231414D265A2A0800C5044C /* Timer.cpp in Sources */,
 				5231415A265A2A2D00C5044C /* main.cpp in Sources */,
-				5212D288266B15FC0022951D /* WindowManager.cpp in Sources */,
+				5212D288266B15FC0022951D /* Device.cpp in Sources */,
 				52314156265A2A0800C5044C /* Tile.cpp in Sources */,
+				52F37832266E5BD40011D9C6 /* BaseMap.cpp in Sources */,
 				528D7639265F3D1700B5C44D /* Colony.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1635,13 +1635,13 @@
 			files = (
 				5231414E265A2A0800C5044C /* Timer.cpp in Sources */,
 				52314151265A2A0800C5044C /* Texture.cpp in Sources */,
-				5212D289266B15FC0022951D /* WindowManager.cpp in Sources */,
+				5212D289266B15FC0022951D /* Device.cpp in Sources */,
 				52314154265A2A0800C5044C /* TileLayer.cpp in Sources */,
-				52EC1A31265DF1AC00F6347E /* Device.cpp in Sources */,
 				52314157265A2A0800C5044C /* Tile.cpp in Sources */,
 				528D763A265F3D1700B5C44D /* Colony.cpp in Sources */,
 				5231415B265A2A2D00C5044C /* main.cpp in Sources */,
 				523140F9265A1B1A00C5044C /* BarsoomTests.swift in Sources */,
+				52F37833266E5BD40011D9C6 /* BaseMap.cpp in Sources */,
 				5231414B265A2A0800C5044C /* Button.cpp in Sources */,
 				528D7654265F409E00B5C44D /* Game.cpp in Sources */,
 			);
@@ -1653,13 +1653,13 @@
 			files = (
 				5231414F265A2A0800C5044C /* Timer.cpp in Sources */,
 				52314152265A2A0800C5044C /* Texture.cpp in Sources */,
-				5212D28A266B15FC0022951D /* WindowManager.cpp in Sources */,
+				5212D28A266B15FC0022951D /* Device.cpp in Sources */,
 				52314155265A2A0800C5044C /* TileLayer.cpp in Sources */,
-				52EC1A32265DF1AC00F6347E /* Device.cpp in Sources */,
 				52314158265A2A0800C5044C /* Tile.cpp in Sources */,
 				528D763B265F3D1700B5C44D /* Colony.cpp in Sources */,
 				5231415C265A2A2D00C5044C /* main.cpp in Sources */,
 				52314104265A1B1A00C5044C /* BarsoomUITests.swift in Sources */,
+				52F37834266E5BD40011D9C6 /* BaseMap.cpp in Sources */,
 				5231414C265A2A0800C5044C /* Button.cpp in Sources */,
 				528D7655265F409E00B5C44D /* Game.cpp in Sources */,
 			);
