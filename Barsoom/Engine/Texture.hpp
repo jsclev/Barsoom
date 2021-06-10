@@ -33,19 +33,16 @@ public:
     void render(SDL_Renderer *renderer,
                 int x,
                 int y,
-                SDL_Rect *clip = nullptr,
-                double angle = 0.0,
-                SDL_Point *center = nullptr,
-                SDL_RendererFlip flip = SDL_FLIP_NONE);
+                SDL_Rect *clip = nullptr);
 
     int getWidth();
 
     int getHeight();
 
 private:
-    SDL_Texture *mTexture;
-    int mWidth;
-    int mHeight;
+    SDL_Texture *texture;
+    int width;
+    int height;
 };
 
 #endif

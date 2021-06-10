@@ -13,7 +13,7 @@
 #include "constants.hpp"
 #include "Button.hpp"
 #include "Game.hpp"
-#include "Device.hpp"
+#include "ScreenManager.hpp"
 #include "BaseMap.hpp"
 
 Game::Game() {
@@ -27,8 +27,8 @@ bool Game::init() {
         SDL_Log("SDL could not initialize! %s\n", SDL_GetError());
         success = false;
     } else {
-        Device device(gRenderer);
-        gWindow = device.createWindow();
+        ScreenManager screenMgr(gRenderer);
+        gWindow = screenMgr.createWindow();
         
         if (gWindow == NULL) {
             SDL_Log( "Window could not be created! SDL Error: %s\n", SDL_GetError() );
@@ -72,13 +72,13 @@ bool Game::loadAssets() {
 //        success = false;
 //    }
     
-    if (!gSpritesTexture.loadFromFile(
-            gRenderer,
-            "bg2.png")) {
-        SDL_Log("Failed to load sprite sheet texture!\n");
-
-        success = false;
-    }
+//    if (!gSpritesTexture.loadFromFile(
+//            gRenderer,
+//            "bg2.png")) {
+//        SDL_Log("Failed to load sprite sheet texture!\n");
+//
+//        success = false;
+//    }
 
     // Grass tiles
     gTileClips[GRASS1_TILE].x = TILE_WIDTH * 0;
@@ -266,10 +266,10 @@ void Game::run() {
             bool quit = false;
             std::vector<TileLayer> v;
             std::vector<Tile> tiles;
-            Device device(gRenderer);
+            ScreenManager screenMgr(gRenderer);
             BaseMap baseMap(gRenderer);
             
-            baseMap.setScreenRect(device.getScreenRect());
+            baseMap.setScreenRect(screenMgr.getScreenRect());
 
             Button button = Button(gRenderer,
                                    &gSpritesTexture,
@@ -317,7 +317,7 @@ void Game::run() {
                     }
                     else if (e.type == SDL_WINDOWEVENT) {
                         if (e.window.event == SDL_WINDOWEVENT_SIZE_CHANGED) {
-                            baseMap.setScreenRect(device.getScreenRect());
+                            baseMap.setScreenRect(screenMgr.getScreenRect());
 //                            gScreenRect.w = e.window.data1;
 //                            gScreenRect.h = e.window.data2;
                         }

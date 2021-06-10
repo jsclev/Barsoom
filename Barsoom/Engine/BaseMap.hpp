@@ -18,8 +18,8 @@ private:
     SDL_Renderer *renderer;
     Texture mapTexture;
     SDL_Rect mapClip;
-    const int BG_WIDTH = 4096;
-    const int BG_HEIGHT = 4096;
+    const int MAP_IMAGE_WIDTH = 8192;
+    const int MAP_IMAGE_HEIGHT = 4096;
 };
 
 #endif

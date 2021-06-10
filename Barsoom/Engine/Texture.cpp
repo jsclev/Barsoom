@@ -2,9 +2,9 @@
 #include "Texture.hpp"
 
 Texture::Texture() {
-    mTexture = nullptr;
-    mWidth = 0;
-    mHeight = 0;
+    texture = nullptr;
+    width = 0;
+    height = 0;
 }
 
 Texture::~Texture() {
@@ -14,29 +14,29 @@ Texture::~Texture() {
 bool Texture::loadFromFile(SDL_Renderer *renderer, const char *path) {
     free();
 
-    SDL_Texture *newTexture = nullptr;
+    SDL_Texture *tempTexture = nullptr;
+    SDL_Surface *tempSurface = IMG_Load(path);
     
-    SDL_Surface *loadedSurface = IMG_Load(path);
-    if (loadedSurface == nullptr) {
+    if (tempSurface == nullptr) {
         printf("Unable to load image %s! SDL_image Error: %s\n", path, IMG_GetError());
-    } else {
-        SDL_SetColorKey(loadedSurface,
-                        SDL_TRUE,
-                        SDL_MapRGB(loadedSurface->format, 0, 0xFF, 0xFF));
-
-        newTexture = SDL_CreateTextureFromSurface(renderer, loadedSurface);
-        if (newTexture == nullptr) {
+    }
+    else {
+        SDL_SetColorKey(tempSurface, SDL_TRUE, SDL_MapRGB(tempSurface->format, 0, 0xFF, 0xFF));
+        tempTexture = SDL_CreateTextureFromSurface(renderer, tempSurface);
+        
+        if (tempTexture == nullptr) {
             printf("Cannot load texture from %s! SDL Error: %s\n", path, SDL_GetError());
-        } else {
-            mWidth = loadedSurface->w;
-            mHeight = loadedSurface->h;
+        }
+        else {
+            width = tempSurface->w;
+            height = tempSurface->h;
         }
 
-        SDL_FreeSurface(loadedSurface);
+        SDL_FreeSurface(tempSurface);
     }
 
-    mTexture = newTexture;
-    return mTexture != nullptr;
+    texture = tempTexture;
+    return texture != nullptr;
 }
 
 #if defined(SDL_TTF_MAJOR_VERSION)
@@ -49,12 +49,12 @@ bool Texture::loadFromRenderedText(SDL_Renderer *renderer,
 
     SDL_Surface *textSurface = TTF_RenderText_Solid(gFont, textureText.c_str(), textColor);
     if (textSurface != nullptr) {
-        mTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
-        if (mTexture == nullptr) {
+        texture = SDL_CreateTextureFromSurface(renderer, textSurface);
+        if (texture == nullptr) {
             printf("Cannot create texture from rendered text! SDL Error: %s\n", SDL_GetError());
         } else {
-            mWidth = textSurface->w;
-            mHeight = textSurface->h;
+            width = textSurface->w;
+            height = textSurface->h;
         }
 
         SDL_FreeSurface(textSurface);
@@ -62,54 +62,48 @@ bool Texture::loadFromRenderedText(SDL_Renderer *renderer,
         printf("Unable to render text surface! SDL_ttf Error: %s\n", TTF_GetError());
     }
 
-    return mTexture != nullptr;
+    return texture != nullptr;
 }
 
 #endif
 
 void Texture::free() {
     //Free texture if it exists
-    if (mTexture != nullptr) {
-        SDL_DestroyTexture(mTexture);
-        mTexture = nullptr;
-        mWidth = 0;
-        mHeight = 0;
+    if (texture != nullptr) {
+        SDL_DestroyTexture(texture);
+        texture = nullptr;
+        width = 0;
+        height = 0;
     }
 }
 
 void Texture::setColor(Uint8 red, Uint8 green, Uint8 blue) {
-    SDL_SetTextureColorMod(mTexture, red, green, blue);
+    SDL_SetTextureColorMod(texture, red, green, blue);
 }
 
 void Texture::setBlendMode(SDL_BlendMode blending) {
-    SDL_SetTextureBlendMode(mTexture, blending);
+    SDL_SetTextureBlendMode(texture, blending);
 }
 
 void Texture::setAlpha(Uint8 alpha) {
-    SDL_SetTextureAlphaMod(mTexture, alpha);
+    SDL_SetTextureAlphaMod(texture, alpha);
 }
 
-void Texture::render(SDL_Renderer *renderer,
-                     int x,
-                     int y,
-                     SDL_Rect *clip,
-                     double angle,
-                     SDL_Point *center,
-                     SDL_RendererFlip flip) {
-    SDL_Rect renderQuad = {x, y, mWidth, mHeight};
+void Texture::render(SDL_Renderer *renderer, int x, int y, SDL_Rect *clip) {
+    SDL_Rect destinationRect = {x, y, width, height};
 
     if (clip != nullptr) {
-        renderQuad.w = clip->w;
-        renderQuad.h = clip->h;
+        destinationRect.w = clip->w;
+        destinationRect.h = clip->h;
     }
 
-    SDL_RenderCopyEx(renderer, mTexture, clip, &renderQuad, angle, center, flip);
+    SDL_RenderCopy(renderer, texture, clip, &destinationRect);
 }
 
 int Texture::getWidth() {
-    return mWidth;
+    return width;
 }
 
 int Texture::getHeight() {
-    return mHeight;
+    return height;
 }

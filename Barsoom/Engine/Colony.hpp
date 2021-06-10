@@ -2,7 +2,6 @@
 #define BARSOOM_COLONY_H
 
 #include <SDL.h>
-#include "Device.hpp"
 #include "Tile.hpp"
 
 class Colony {
