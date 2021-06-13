@@ -312,6 +312,16 @@
 		52A228B4265B881900E7208C /* Pigiarniq Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52A22735265B881800E7208C /* Pigiarniq Italic.ttf */; };
 		52A228B5265B881900E7208C /* Pigiarniq Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52A22735265B881800E7208C /* Pigiarniq Italic.ttf */; };
 		52A228D1265C41AB00E7208C /* tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A226B3265B881800E7208C /* tiles.png */; };
+		52C23D672675CF8500356942 /* buildings_spritesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C23D662675CF8500356942 /* buildings_spritesheet.png */; };
+		52C23D6B2675D5AE00356942 /* NuclearReactor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52C23D692675D5AE00356942 /* NuclearReactor.cpp */; };
+		52C23D6C2675D5AE00356942 /* NuclearReactor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52C23D692675D5AE00356942 /* NuclearReactor.cpp */; };
+		52C23D6D2675D5AE00356942 /* NuclearReactor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52C23D692675D5AE00356942 /* NuclearReactor.cpp */; };
+		52C23D702675F4CA00356942 /* HydroponicGreenhouse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52C23D6E2675F4CA00356942 /* HydroponicGreenhouse.cpp */; };
+		52C23D712675F4CA00356942 /* HydroponicGreenhouse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52C23D6E2675F4CA00356942 /* HydroponicGreenhouse.cpp */; };
+		52C23D722675F4CA00356942 /* HydroponicGreenhouse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52C23D6E2675F4CA00356942 /* HydroponicGreenhouse.cpp */; };
+		52C23D752675FB1100356942 /* Habitat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52C23D732675FB1100356942 /* Habitat.cpp */; };
+		52C23D762675FB1100356942 /* Habitat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52C23D732675FB1100356942 /* Habitat.cpp */; };
+		52C23D772675FB1100356942 /* Habitat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52C23D732675FB1100356942 /* Habitat.cpp */; };
 		52EC1A34265DFFD500F6347E /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EC1A33265DFFD500F6347E /* CoreServices.framework */; };
 		52EC1A36265EB51500F6347E /* mars_terrain.png in Resources */ = {isa = PBXBuildFile; fileRef = 52EC1A35265EB51500F6347E /* mars_terrain.png */; };
 		52EC1A37265EB51500F6347E /* mars_terrain.png in Resources */ = {isa = PBXBuildFile; fileRef = 52EC1A35265EB51500F6347E /* mars_terrain.png */; };
@@ -654,6 +664,13 @@
 		52A22735265B881800E7208C /* Pigiarniq Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pigiarniq Italic.ttf"; sourceTree = "<group>"; };
 		52A80D50265F2DBD00EEBA1E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		52A80D66265F2DD200EEBA1E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		52C23D662675CF8500356942 /* buildings_spritesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buildings_spritesheet.png; sourceTree = "<group>"; };
+		52C23D692675D5AE00356942 /* NuclearReactor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NuclearReactor.cpp; sourceTree = "<group>"; };
+		52C23D6A2675D5AE00356942 /* NuclearReactor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NuclearReactor.hpp; sourceTree = "<group>"; };
+		52C23D6E2675F4CA00356942 /* HydroponicGreenhouse.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HydroponicGreenhouse.cpp; sourceTree = "<group>"; };
+		52C23D6F2675F4CA00356942 /* HydroponicGreenhouse.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HydroponicGreenhouse.hpp; sourceTree = "<group>"; };
+		52C23D732675FB1100356942 /* Habitat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Habitat.cpp; sourceTree = "<group>"; };
+		52C23D742675FB1100356942 /* Habitat.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Habitat.hpp; sourceTree = "<group>"; };
 		52EC1A33265DFFD500F6347E /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		52EC1A35265EB51500F6347E /* mars_terrain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mars_terrain.png; sourceTree = "<group>"; };
 		52F37830266E5BD40011D9C6 /* BaseMap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BaseMap.cpp; sourceTree = "<group>"; };
@@ -798,6 +815,7 @@
 		5231413E265A2A0800C5044C /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				52C23D682675D27000356942 /* Buildings */,
 				52F37830266E5BD40011D9C6 /* BaseMap.cpp */,
 				52F37831266E5BD40011D9C6 /* BaseMap.hpp */,
 				52314140265A2A0800C5044C /* Button.cpp */,
@@ -1070,6 +1088,7 @@
 		52A228D0265C414700E7208C /* data */ = {
 			isa = PBXGroup;
 			children = (
+				52C23D662675CF8500356942 /* buildings_spritesheet.png */,
 				52EC1A35265EB51500F6347E /* mars_terrain.png */,
 				52F378612671FB090011D9C6 /* world_map.png */,
 				52A22721265B881800E7208C /* Fonts */,
@@ -1077,6 +1096,19 @@
 				52A226B3265B881800E7208C /* tiles.png */,
 			);
 			path = data;
+			sourceTree = "<group>";
+		};
+		52C23D682675D27000356942 /* Buildings */ = {
+			isa = PBXGroup;
+			children = (
+				52C23D692675D5AE00356942 /* NuclearReactor.cpp */,
+				52C23D6A2675D5AE00356942 /* NuclearReactor.hpp */,
+				52C23D6E2675F4CA00356942 /* HydroponicGreenhouse.cpp */,
+				52C23D6F2675F4CA00356942 /* HydroponicGreenhouse.hpp */,
+				52C23D732675FB1100356942 /* Habitat.cpp */,
+				52C23D742675FB1100356942 /* Habitat.hpp */,
+			);
+			path = Buildings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1337,6 +1369,7 @@
 				523140EE265A1B1A00C5044C /* Preview Assets.xcassets in Resources */,
 				52F378622671FB090011D9C6 /* world_map.png in Resources */,
 				5212D285266B08890022951D /* Launch Screen.storyboard in Resources */,
+				52C23D672675CF8500356942 /* buildings_spritesheet.png in Resources */,
 				523140EB265A1B1A00C5044C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1627,8 +1660,11 @@
 				5231414D265A2A0800C5044C /* Timer.cpp in Sources */,
 				5231415A265A2A2D00C5044C /* main.cpp in Sources */,
 				5212D288266B15FC0022951D /* ScreenManager.cpp in Sources */,
+				52C23D6B2675D5AE00356942 /* NuclearReactor.cpp in Sources */,
 				52314156265A2A0800C5044C /* Tile.cpp in Sources */,
+				52C23D702675F4CA00356942 /* HydroponicGreenhouse.cpp in Sources */,
 				52F37832266E5BD40011D9C6 /* BaseMap.cpp in Sources */,
+				52C23D752675FB1100356942 /* Habitat.cpp in Sources */,
 				528D7639265F3D1700B5C44D /* Colony.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1638,14 +1674,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5231414E265A2A0800C5044C /* Timer.cpp in Sources */,
+				52C23D6C2675D5AE00356942 /* NuclearReactor.cpp in Sources */,
 				52314151265A2A0800C5044C /* Texture.cpp in Sources */,
 				5212D289266B15FC0022951D /* ScreenManager.cpp in Sources */,
 				52314154265A2A0800C5044C /* TileLayer.cpp in Sources */,
 				52314157265A2A0800C5044C /* Tile.cpp in Sources */,
 				528D763A265F3D1700B5C44D /* Colony.cpp in Sources */,
+				52C23D762675FB1100356942 /* Habitat.cpp in Sources */,
 				5231415B265A2A2D00C5044C /* main.cpp in Sources */,
 				523140F9265A1B1A00C5044C /* BarsoomTests.swift in Sources */,
 				52F37833266E5BD40011D9C6 /* BaseMap.cpp in Sources */,
+				52C23D712675F4CA00356942 /* HydroponicGreenhouse.cpp in Sources */,
 				5231414B265A2A0800C5044C /* Button.cpp in Sources */,
 				528D7654265F409E00B5C44D /* Game.cpp in Sources */,
 			);
@@ -1656,14 +1695,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5231414F265A2A0800C5044C /* Timer.cpp in Sources */,
+				52C23D6D2675D5AE00356942 /* NuclearReactor.cpp in Sources */,
 				52314152265A2A0800C5044C /* Texture.cpp in Sources */,
 				5212D28A266B15FC0022951D /* ScreenManager.cpp in Sources */,
 				52314155265A2A0800C5044C /* TileLayer.cpp in Sources */,
 				52314158265A2A0800C5044C /* Tile.cpp in Sources */,
 				528D763B265F3D1700B5C44D /* Colony.cpp in Sources */,
+				52C23D772675FB1100356942 /* Habitat.cpp in Sources */,
 				5231415C265A2A2D00C5044C /* main.cpp in Sources */,
 				52314104265A1B1A00C5044C /* BarsoomUITests.swift in Sources */,
 				52F37834266E5BD40011D9C6 /* BaseMap.cpp in Sources */,
+				52C23D722675F4CA00356942 /* HydroponicGreenhouse.cpp in Sources */,
 				5231414C265A2A0800C5044C /* Button.cpp in Sources */,
 				528D7655265F409E00B5C44D /* Game.cpp in Sources */,
 			);

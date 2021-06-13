@@ -1,20 +1,4 @@
-#include <CoreFoundation/CFBundle.h>
-
-#include <SDL.h>
-#include <SDL_image.h>
-#include <SDL_ttf.h>
-#include <cstdio>
-#include <string>
-#include <sstream>
-
-#include "Texture.hpp"
-#include "Timer.hpp"
-#include "Tile.hpp"
-#include "constants.hpp"
-#include "Button.hpp"
 #include "Game.hpp"
-#include "ScreenManager.hpp"
-#include "BaseMap.hpp"
 
 Game::Game() {
     
@@ -27,24 +11,24 @@ bool Game::init() {
         SDL_Log("SDL could not initialize! %s\n", SDL_GetError());
         success = false;
     } else {
-        ScreenManager screenMgr(gRenderer);
-        gWindow = screenMgr.createWindow();
+        ScreenManager screenMgr(renderer);
+        window = screenMgr.createWindow();
         
-        if (gWindow == NULL) {
+        if (window == NULL) {
             SDL_Log( "Window could not be created! SDL Error: %s\n", SDL_GetError() );
             success = false;
         }
         
-        if (gWindow == nullptr) {
+        if (window == nullptr) {
             SDL_Log("Window could not be created! SDL Error: %s\n", SDL_GetError());
             success = false;
         } else {
-            gRenderer = SDL_CreateRenderer(gWindow, -1, SDL_RENDERER_ACCELERATED);
-            if (gRenderer == nullptr) {
+            renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+            if (renderer == nullptr) {
                 SDL_Log("Renderer could not be created! SDL Error: %s\n", SDL_GetError());
                 success = false;
             } else {
-                SDL_SetRenderDrawColor(gRenderer, 0x00, 0x00, 0x00, 0x00);
+                SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0x00);
 
                 int imgFlags = IMG_INIT_PNG | IMG_INIT_JPG;
                 if (!(IMG_Init(imgFlags) & imgFlags)) {
@@ -72,13 +56,13 @@ bool Game::loadAssets() {
 //        success = false;
 //    }
     
-//    if (!gSpritesTexture.loadFromFile(
-//            gRenderer,
-//            "bg2.png")) {
-//        SDL_Log("Failed to load sprite sheet texture!\n");
-//
-//        success = false;
-//    }
+    if (!spritesTexture.loadFromFile(
+            renderer,
+            "buildings_spritesheet.png")) {
+        SDL_Log("Failed to load sprite sheet texture!\n");
+
+        success = false;
+    }
 
     // Grass tiles
     gTileClips[GRASS1_TILE].x = TILE_WIDTH * 0;
@@ -266,26 +250,38 @@ void Game::run() {
             bool quit = false;
             std::vector<TileLayer> v;
             std::vector<Tile> tiles;
-            ScreenManager screenMgr(gRenderer);
-            BaseMap baseMap(gRenderer);
+            ScreenManager screenMgr(renderer);
+            BaseMap baseMap(renderer);
             
+            Habitat habitat0(renderer, &spritesTexture);
+            Habitat habitat1(renderer, &spritesTexture);
+            Habitat habitat2(renderer, &spritesTexture);
+            NuclearReactor nuclearReactor0(renderer, &spritesTexture);
+            NuclearReactor nuclearReactor1(renderer, &spritesTexture);
+            NuclearReactor nuclearReactor2(renderer, &spritesTexture);
+            HydroponicGreenhouse hydroponicGreenhouse0(renderer, &spritesTexture);
+            HydroponicGreenhouse hydroponicGreenhouse1(renderer, &spritesTexture);
+            HydroponicGreenhouse hydroponicGreenhouse2(renderer, &spritesTexture);
+
+            habitat0.setLevel(0);
+            habitat1.setLevel(1);
+            habitat2.setLevel(3);
+            nuclearReactor0.setLevel(0);
+            nuclearReactor1.setLevel(1);
+            nuclearReactor2.setLevel(3);
+            hydroponicGreenhouse0.setLevel(0);
+            hydroponicGreenhouse1.setLevel(1);
+            hydroponicGreenhouse2.setLevel(3);
+
             baseMap.setScreenRect(screenMgr.getScreenRect());
 
-            Button button = Button(gRenderer,
-                                   &gSpritesTexture,
+            Button button = Button(renderer,
+                                   &spritesTexture,
                                    50,
                                    50,
                                    gButtonClips[MAIN_BUTTON]);
 
             srand((unsigned) time(0));
-
-
-//            Tile* icons = (Tile*)malloc(sizeof(Tile) * NUM_ICONS);
-//            icons[0] = Tile(gRenderer,
-//                            &gSpritesTexture,
-//                            500,
-//                            500,
-//                            gIconClips[FOOD_ICON]);
 
             SDL_Event e;
             SDL_Point touchLocation = { gScreenRect.w / 2, gScreenRect.h / 2 };
@@ -296,7 +292,7 @@ void Game::run() {
             int countedFrames = 0;
             fpsTimer.start();
             
-            SDL_SetRenderDrawColor(gRenderer, 0x00, 0x00, 0x00, 0x00);
+            SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0x00);
 
             while (!quit) {
                 capTimer.start();
@@ -318,8 +314,6 @@ void Game::run() {
                     else if (e.type == SDL_WINDOWEVENT) {
                         if (e.window.event == SDL_WINDOWEVENT_SIZE_CHANGED) {
                             baseMap.setScreenRect(screenMgr.getScreenRect());
-//                            gScreenRect.w = e.window.data1;
-//                            gScreenRect.h = e.window.data2;
                         }
                     }
                 }
@@ -329,13 +323,25 @@ void Game::run() {
                     avgFPS = 0;
                 }
 
-                SDL_RenderClear(gRenderer);
+                SDL_RenderClear(renderer);
 //                for (auto tile: tiles) {
 //                    tile.render();
 //                }
                 baseMap.render();
-//                button.render();
-                SDL_RenderPresent(gRenderer);
+                
+                habitat0.render(2, 5);
+                habitat1.render(3, 5);
+                habitat2.render(4, 5);
+                
+                nuclearReactor0.render(2, 2);
+                nuclearReactor1.render(3, 2);
+                nuclearReactor2.render(4, 2);
+                
+                hydroponicGreenhouse0.render(2, 4);
+                hydroponicGreenhouse1.render(3, 4);
+                hydroponicGreenhouse2.render(4, 4);
+
+                SDL_RenderPresent(renderer);
                 
                 ++countedFrames;
 
@@ -356,10 +362,10 @@ void Game::quit() {
     TTF_CloseFont(gFont);
     gFont = nullptr;
 
-    SDL_DestroyRenderer(gRenderer);
-    SDL_DestroyWindow(gWindow);
-    gWindow = nullptr;
-    gRenderer = nullptr;
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
+    window = nullptr;
+    renderer = nullptr;
 
     TTF_Quit();
     IMG_Quit();

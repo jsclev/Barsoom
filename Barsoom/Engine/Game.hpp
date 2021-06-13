@@ -1,8 +1,25 @@
-#ifndef BARSOOM_GAME_H
-#define BARSOOM_GAME_H
+#ifndef GAME_H
+#define GAME_H
+
+#include <CoreFoundation/CFBundle.h>
+#include <cstdio>
+#include <string>
+#include <sstream>
 
 #include <SDL.h>
+#include <SDL_image.h>
+#include <SDL_ttf.h>
+
+#include "constants.hpp"
+#include "BaseMap.hpp"
+#include "Button.hpp"
+#include "Habitat.hpp"
+#include "HydroponicGreenhouse.hpp"
+#include "NuclearReactor.hpp"
+#include "Texture.hpp"
 #include "Tile.hpp"
+#include "Timer.hpp"
+#include "ScreenManager.hpp"
 
 class Game {
 public:
@@ -17,14 +34,14 @@ public:
     void quit();
 
 private:
-    SDL_Window *gWindow = nullptr;
-    SDL_Renderer *gRenderer = nullptr;
+    SDL_Window *window = nullptr;
+    SDL_Renderer *renderer = nullptr;
     TTF_Font *gFont = nullptr;
     SDL_Rect gTileClips[32];
     SDL_Rect gIconClips[1];
     SDL_Rect gButtonClips[1];
     SDL_Rect gScreenRect = {0, 0, 0, 0};
-    Texture gSpritesTexture;
+    Texture spritesTexture;
     Texture gFPSTextTexture;
 };
 

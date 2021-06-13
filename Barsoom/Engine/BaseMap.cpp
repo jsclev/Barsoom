@@ -1,9 +1,10 @@
 #include <SDL.h>
 
 #include "BaseMap.hpp"
+#include "ScreenManager.hpp"
 
 BaseMap::BaseMap(SDL_Renderer *renderer) : renderer(renderer) {
-    if (!mapTexture.loadFromFile(renderer, "world_map.png")) {
+    if (!mapTexture.loadFromFile(renderer, "mars_terrain.png")) {
         SDL_Log("Failed to load map image!\n");
     }
 }
