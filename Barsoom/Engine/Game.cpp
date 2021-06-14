@@ -253,25 +253,65 @@ void Game::run() {
             ScreenManager screenMgr(renderer);
             BaseMap baseMap(renderer);
             
+            ElectrolysisPlant electrolysisPlant0(renderer, &spritesTexture);
+            ElectrolysisPlant electrolysisPlant1(renderer, &spritesTexture);
+            ElectrolysisPlant electrolysisPlant2(renderer, &spritesTexture);
+            ElectrolysisPlant electrolysisPlant3(renderer, &spritesTexture);
+            ElectrolysisPlant electrolysisPlant4(renderer, &spritesTexture);
+            FusionReactor fusionReactor0(renderer, &spritesTexture);
+            FusionReactor fusionReactor1(renderer, &spritesTexture);
+            FusionReactor fusionReactor2(renderer, &spritesTexture);
             Habitat habitat0(renderer, &spritesTexture);
             Habitat habitat1(renderer, &spritesTexture);
             Habitat habitat2(renderer, &spritesTexture);
-            NuclearReactor nuclearReactor0(renderer, &spritesTexture);
-            NuclearReactor nuclearReactor1(renderer, &spritesTexture);
-            NuclearReactor nuclearReactor2(renderer, &spritesTexture);
             HydroponicGreenhouse hydroponicGreenhouse0(renderer, &spritesTexture);
             HydroponicGreenhouse hydroponicGreenhouse1(renderer, &spritesTexture);
             HydroponicGreenhouse hydroponicGreenhouse2(renderer, &spritesTexture);
+            NuclearReactor nuclearReactor0(renderer, &spritesTexture);
+            NuclearReactor nuclearReactor1(renderer, &spritesTexture);
+            NuclearReactor nuclearReactor2(renderer, &spritesTexture);
+            OxygenExtractor oxygenExtractor0(renderer, &spritesTexture);
+            OxygenExtractor oxygenExtractor1(renderer, &spritesTexture);
+            OxygenExtractor oxygenExtractor2(renderer, &spritesTexture);
+            SolarFarm solarFarm0(renderer, &spritesTexture);
+            SolarFarm solarFarm1(renderer, &spritesTexture);
+            SolarFarm solarFarm2(renderer, &spritesTexture);
+            SolarFarm solarFarm3(renderer, &spritesTexture);
+            SolarFarm solarFarm4(renderer, &spritesTexture);
+
+            electrolysisPlant0.setLevel(0);
+            electrolysisPlant1.setLevel(1);
+            electrolysisPlant2.setLevel(2);
+            electrolysisPlant3.setLevel(3);
+            electrolysisPlant4.setLevel(4);
+            
+            fusionReactor0.setLevel(0);
+            fusionReactor1.setLevel(1);
+            fusionReactor2.setLevel(2);
+            fusionReactor2.setLevel(3);
+            fusionReactor2.setLevel(4);
 
             habitat0.setLevel(0);
             habitat1.setLevel(1);
             habitat2.setLevel(3);
-            nuclearReactor0.setLevel(0);
-            nuclearReactor1.setLevel(1);
-            nuclearReactor2.setLevel(3);
+            
             hydroponicGreenhouse0.setLevel(0);
             hydroponicGreenhouse1.setLevel(1);
             hydroponicGreenhouse2.setLevel(3);
+            
+            nuclearReactor0.setLevel(0);
+            nuclearReactor1.setLevel(1);
+            nuclearReactor2.setLevel(3);
+            
+            oxygenExtractor0.setLevel(1);
+            oxygenExtractor1.setLevel(3);
+            oxygenExtractor2.setLevel(3);
+            
+            solarFarm0.setLevel(0);
+            solarFarm1.setLevel(1);
+            solarFarm2.setLevel(2);
+            solarFarm3.setLevel(3);
+            solarFarm4.setLevel(4);
 
             baseMap.setScreenRect(screenMgr.getScreenRect());
 
@@ -329,17 +369,33 @@ void Game::run() {
 //                }
                 baseMap.render();
                 
-                habitat0.render(2, 5);
-                habitat1.render(3, 5);
-                habitat2.render(4, 5);
+                electrolysisPlant0.render(2, 0);
+                electrolysisPlant1.render(3, 0);
+                electrolysisPlant2.render(4, 0);
+                electrolysisPlant3.render(5, 0);
+                electrolysisPlant4.render(6, 0);
                 
-                nuclearReactor0.render(2, 2);
-                nuclearReactor1.render(3, 2);
-                nuclearReactor2.render(4, 2);
+                habitat0.render(2, 1);
+                habitat1.render(3, 1);
+                habitat2.render(4, 1);
+                
+                fusionReactor0.render(2, 2);
+                fusionReactor1.render(3, 2);
+                fusionReactor2.render(4, 2);
+                
+                nuclearReactor0.render(2, 3);
+                nuclearReactor1.render(3, 3);
+                nuclearReactor2.render(4, 3);
                 
                 hydroponicGreenhouse0.render(2, 4);
                 hydroponicGreenhouse1.render(3, 4);
                 hydroponicGreenhouse2.render(4, 4);
+                
+                oxygenExtractor0.render(2, 5);
+                oxygenExtractor1.render(3, 5);
+                oxygenExtractor2.render(4, 5);
+                
+                solarFarm0.render(0, 0);
 
                 SDL_RenderPresent(renderer);
                 

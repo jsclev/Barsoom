@@ -1,25 +1,25 @@
-#include "HydroponicGreenhouse.hpp"
+#include "FusionReactor.hpp"
 
-HydroponicGreenhouse::HydroponicGreenhouse(
+FusionReactor::FusionReactor(
     SDL_Renderer *renderer,
     Texture *texture) :
     renderer(renderer),
     texture(texture) {
     clip = {
         0,
-        535,
+        0,
         300,
-        210
+        250
     };
         
     this->level = 0;
 }
 
-void HydroponicGreenhouse::render(int gridPositionX, int gridPositionY) {
+void FusionReactor::render(int gridPositionX, int gridPositionY) {
     texture->render(renderer, gridPositionX * 300, gridPositionY * 300, &clip);
 }
 
-void HydroponicGreenhouse::setLevel(int level) {
+void FusionReactor::setLevel(int level) {
     this->level = level;
     clip.x = level * 300;
 }

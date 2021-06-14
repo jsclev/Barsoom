@@ -13,13 +13,17 @@
 #include "constants.hpp"
 #include "BaseMap.hpp"
 #include "Button.hpp"
+#include "ElectrolysisPlant.hpp"
+#include "FusionReactor.hpp"
 #include "Habitat.hpp"
 #include "HydroponicGreenhouse.hpp"
 #include "NuclearReactor.hpp"
+#include "OxygenExtractor.hpp"
 #include "Texture.hpp"
 #include "Tile.hpp"
 #include "Timer.hpp"
 #include "ScreenManager.hpp"
+#include "SolarFarm.hpp"
 
 class Game {
 public:
