@@ -49,12 +49,6 @@ bool Game::init() {
 
 bool Game::loadAssets() {
     bool success = true;
-
-//    gFont = TTF_OpenFont("Georgia.ttf", 64);
-//    if (gFont == nullptr) {
-//        SDL_Log("Failed to load lazy font! SDL_ttf Error: %s\n", TTF_GetError());
-//        success = false;
-//    }
     
     if (!spritesTexture.loadFromFile(
             renderer,
@@ -63,179 +57,6 @@ bool Game::loadAssets() {
 
         success = false;
     }
-
-    // Grass tiles
-    gTileClips[GRASS1_TILE].x = TILE_WIDTH * 0;
-    gTileClips[GRASS1_TILE].y = 0;
-    gTileClips[GRASS1_TILE].w = TILE_WIDTH;
-    gTileClips[GRASS1_TILE].h = TILE_HEIGHT;
-
-    gTileClips[GRASS2_TILE].x = TILE_WIDTH * 1;
-    gTileClips[GRASS2_TILE].y = 0;
-    gTileClips[GRASS2_TILE].w = TILE_WIDTH;
-    gTileClips[GRASS2_TILE].h = TILE_HEIGHT;
-
-    gTileClips[GRASS3_TILE].x = TILE_WIDTH * 2;
-    gTileClips[GRASS3_TILE].y = 0;
-    gTileClips[GRASS3_TILE].w = TILE_WIDTH;
-    gTileClips[GRASS3_TILE].h = TILE_HEIGHT;
-
-    gTileClips[GRASS4_TILE].x = TILE_WIDTH * 3;
-    gTileClips[GRASS4_TILE].y = 0;
-    gTileClips[GRASS4_TILE].w = TILE_WIDTH;
-    gTileClips[GRASS4_TILE].h = TILE_HEIGHT;
-
-    // Water tiles
-    gTileClips[WATER1_TILE].x = TILE_WIDTH * 4;
-    gTileClips[WATER1_TILE].y = 0;
-    gTileClips[WATER1_TILE].w = TILE_WIDTH;
-    gTileClips[WATER1_TILE].h = TILE_HEIGHT;
-
-    gTileClips[WATER2_TILE].x = TILE_WIDTH * 5;
-    gTileClips[WATER2_TILE].y = 0;
-    gTileClips[WATER2_TILE].w = TILE_WIDTH;
-    gTileClips[WATER2_TILE].h = TILE_HEIGHT;
-
-    gTileClips[WATER3_TILE].x = TILE_WIDTH * 6;
-    gTileClips[WATER3_TILE].y = 0;
-    gTileClips[WATER3_TILE].w = TILE_WIDTH;
-    gTileClips[WATER3_TILE].h = TILE_HEIGHT;
-
-    gTileClips[WATER4_TILE].x = TILE_WIDTH * 7;
-    gTileClips[WATER4_TILE].y = 0;
-    gTileClips[WATER4_TILE].w = TILE_WIDTH;
-    gTileClips[WATER4_TILE].h = TILE_HEIGHT;
-
-    // Mountain tiles
-    gTileClips[MOUNTAIN1_TILE].x = TILE_WIDTH * 0;
-    gTileClips[MOUNTAIN1_TILE].y = TILE_HEIGHT;
-    gTileClips[MOUNTAIN1_TILE].w = TILE_WIDTH;
-    gTileClips[MOUNTAIN1_TILE].h = TILE_HEIGHT;
-
-    gTileClips[MOUNTAIN2_TILE].x = TILE_WIDTH * 1;
-    gTileClips[MOUNTAIN2_TILE].y = TILE_HEIGHT;
-    gTileClips[MOUNTAIN2_TILE].w = TILE_WIDTH;
-    gTileClips[MOUNTAIN2_TILE].h = TILE_HEIGHT;
-
-    gTileClips[MOUNTAIN3_TILE].x = TILE_WIDTH * 2;
-    gTileClips[MOUNTAIN3_TILE].y = TILE_HEIGHT;
-    gTileClips[MOUNTAIN3_TILE].w = TILE_WIDTH;
-    gTileClips[MOUNTAIN3_TILE].h = TILE_HEIGHT;
-
-    gTileClips[MOUNTAIN4_TILE].x = TILE_WIDTH * 3;
-    gTileClips[MOUNTAIN4_TILE].y = TILE_HEIGHT;
-    gTileClips[MOUNTAIN4_TILE].w = TILE_WIDTH;
-    gTileClips[MOUNTAIN4_TILE].h = TILE_HEIGHT;
-
-    gTileClips[DESERT1_TILE].x = TILE_WIDTH * 4;
-    gTileClips[DESERT1_TILE].y = TILE_HEIGHT;
-    gTileClips[DESERT1_TILE].w = TILE_WIDTH;
-    gTileClips[DESERT1_TILE].h = TILE_HEIGHT;
-
-    gTileClips[DESERT2_TILE].x = TILE_WIDTH * 5;
-    gTileClips[DESERT2_TILE].y = TILE_HEIGHT;
-    gTileClips[DESERT2_TILE].w = TILE_WIDTH;
-    gTileClips[DESERT2_TILE].h = TILE_HEIGHT;
-
-    gTileClips[DESERT3_TILE].x = TILE_WIDTH * 6;
-    gTileClips[DESERT3_TILE].y = TILE_HEIGHT;
-    gTileClips[DESERT3_TILE].w = TILE_WIDTH;
-    gTileClips[DESERT3_TILE].h = TILE_HEIGHT;
-
-    gTileClips[DESERT4_TILE].x = TILE_WIDTH * 7;
-    gTileClips[DESERT4_TILE].y = TILE_HEIGHT;
-    gTileClips[DESERT4_TILE].w = TILE_WIDTH;
-    gTileClips[DESERT4_TILE].h = TILE_HEIGHT;
-
-    gTileClips[FOREST1_TILE].x = TILE_WIDTH * 0;
-    gTileClips[FOREST1_TILE].y = TILE_HEIGHT * 2;
-    gTileClips[FOREST1_TILE].w = TILE_WIDTH;
-    gTileClips[FOREST1_TILE].h = TILE_HEIGHT;
-
-    gTileClips[FOREST2_TILE].x = TILE_WIDTH * 1;
-    gTileClips[FOREST2_TILE].y = TILE_HEIGHT * 2;
-    gTileClips[FOREST2_TILE].w = TILE_WIDTH;
-    gTileClips[FOREST2_TILE].h = TILE_HEIGHT;
-
-    gTileClips[FOREST3_TILE].x = TILE_WIDTH * 2;
-    gTileClips[FOREST3_TILE].y = TILE_HEIGHT * 2;
-    gTileClips[FOREST3_TILE].w = TILE_WIDTH;
-    gTileClips[FOREST3_TILE].h = TILE_HEIGHT;
-
-    gTileClips[FOREST4_TILE].x = TILE_WIDTH * 3;
-    gTileClips[FOREST4_TILE].y = TILE_HEIGHT * 2;
-    gTileClips[FOREST4_TILE].w = TILE_WIDTH;
-    gTileClips[FOREST4_TILE].h = TILE_HEIGHT;
-
-    gTileClips[DIRT1_TILE].x = TILE_WIDTH * 0;
-    gTileClips[DIRT1_TILE].y = TILE_HEIGHT * 3;
-    gTileClips[DIRT1_TILE].w = TILE_WIDTH;
-    gTileClips[DIRT1_TILE].h = TILE_HEIGHT;
-
-    gTileClips[DIRT2_TILE].x = TILE_WIDTH * 1;
-    gTileClips[DIRT2_TILE].y = TILE_HEIGHT * 3;
-    gTileClips[DIRT2_TILE].w = TILE_WIDTH;
-    gTileClips[DIRT2_TILE].h = TILE_HEIGHT;
-
-    gTileClips[DIRT3_TILE].x = TILE_WIDTH * 2;
-    gTileClips[DIRT3_TILE].y = TILE_HEIGHT * 3;
-    gTileClips[DIRT3_TILE].w = TILE_WIDTH;
-    gTileClips[DIRT3_TILE].h = TILE_HEIGHT;
-
-    gTileClips[DIRT4_TILE].x = TILE_WIDTH * 3;
-    gTileClips[DIRT4_TILE].y = TILE_HEIGHT * 3;
-    gTileClips[DIRT4_TILE].w = TILE_WIDTH;
-    gTileClips[DIRT4_TILE].h = TILE_HEIGHT;
-
-    gTileClips[MARSH1_TILE].x = TILE_WIDTH * 4;
-    gTileClips[MARSH1_TILE].y = TILE_HEIGHT * 2;
-    gTileClips[MARSH1_TILE].w = TILE_WIDTH;
-    gTileClips[MARSH1_TILE].h = TILE_HEIGHT;
-
-    gTileClips[MARSH2_TILE].x = TILE_WIDTH * 5;
-    gTileClips[MARSH2_TILE].y = TILE_HEIGHT * 2;
-    gTileClips[MARSH2_TILE].w = TILE_WIDTH;
-    gTileClips[MARSH2_TILE].h = TILE_HEIGHT;
-
-    gTileClips[MARSH3_TILE].x = TILE_WIDTH * 6;
-    gTileClips[MARSH3_TILE].y = TILE_HEIGHT * 2;
-    gTileClips[MARSH3_TILE].w = TILE_WIDTH;
-    gTileClips[MARSH3_TILE].h = TILE_HEIGHT;
-
-    gTileClips[MARSH4_TILE].x = TILE_WIDTH * 7;
-    gTileClips[MARSH4_TILE].y = TILE_HEIGHT * 2;
-    gTileClips[MARSH4_TILE].w = TILE_WIDTH;
-    gTileClips[MARSH4_TILE].h = TILE_HEIGHT;
-
-    gTileClips[HILLS1_TILE].x = TILE_WIDTH * 0;
-    gTileClips[HILLS1_TILE].y = TILE_HEIGHT * 4;
-    gTileClips[HILLS1_TILE].w = TILE_WIDTH;
-    gTileClips[HILLS1_TILE].h = TILE_HEIGHT;
-
-    gTileClips[HILLS2_TILE].x = TILE_WIDTH * 1;
-    gTileClips[HILLS2_TILE].y = TILE_HEIGHT * 4;
-    gTileClips[HILLS2_TILE].w = TILE_WIDTH;
-    gTileClips[HILLS2_TILE].h = TILE_HEIGHT;
-
-    gTileClips[HILLS3_TILE].x = TILE_WIDTH * 2;
-    gTileClips[HILLS3_TILE].y = TILE_HEIGHT * 4;
-    gTileClips[HILLS3_TILE].w = TILE_WIDTH;
-    gTileClips[HILLS3_TILE].h = TILE_HEIGHT;
-
-    gTileClips[HILLS4_TILE].x = TILE_WIDTH * 3;
-    gTileClips[HILLS4_TILE].y = TILE_HEIGHT * 4;
-    gTileClips[HILLS4_TILE].w = TILE_WIDTH;
-    gTileClips[HILLS4_TILE].h = TILE_HEIGHT;
-
-    gIconClips[FOOD_ICON].x = 7 + TILE_WIDTH * 8 + ICON_WIDTH * 0;
-    gIconClips[FOOD_ICON].y = ICON_HEIGHT * 0;
-    gIconClips[FOOD_ICON].w = ICON_WIDTH;
-    gIconClips[FOOD_ICON].h = ICON_HEIGHT;
-
-    gButtonClips[MAIN_BUTTON].x = TILE_WIDTH * 8;
-    gButtonClips[MAIN_BUTTON].y = TILE_HEIGHT / 3;
-    gButtonClips[MAIN_BUTTON].w = BUTTON_WIDTH;
-    gButtonClips[MAIN_BUTTON].h = BUTTON_HEIGHT;
 
     return success;
 }
@@ -247,71 +68,92 @@ void Game::run() {
         if (!loadAssets()) {
             SDL_Log("Failed to load media!\n");
         } else {
+//            initMap();
             bool quit = false;
             std::vector<TileLayer> v;
             std::vector<Tile> tiles;
             ScreenManager screenMgr(renderer);
             BaseMap baseMap(renderer);
             
-            ElectrolysisPlant electrolysisPlant0(renderer, &spritesTexture);
-            ElectrolysisPlant electrolysisPlant1(renderer, &spritesTexture);
-            ElectrolysisPlant electrolysisPlant2(renderer, &spritesTexture);
-            ElectrolysisPlant electrolysisPlant3(renderer, &spritesTexture);
-            ElectrolysisPlant electrolysisPlant4(renderer, &spritesTexture);
-            FusionReactor fusionReactor0(renderer, &spritesTexture);
-            FusionReactor fusionReactor1(renderer, &spritesTexture);
-            FusionReactor fusionReactor2(renderer, &spritesTexture);
-            Habitat habitat0(renderer, &spritesTexture);
-            Habitat habitat1(renderer, &spritesTexture);
-            Habitat habitat2(renderer, &spritesTexture);
-            HydroponicGreenhouse hydroponicGreenhouse0(renderer, &spritesTexture);
-            HydroponicGreenhouse hydroponicGreenhouse1(renderer, &spritesTexture);
-            HydroponicGreenhouse hydroponicGreenhouse2(renderer, &spritesTexture);
-            NuclearReactor nuclearReactor0(renderer, &spritesTexture);
-            NuclearReactor nuclearReactor1(renderer, &spritesTexture);
-            NuclearReactor nuclearReactor2(renderer, &spritesTexture);
-            OxygenExtractor oxygenExtractor0(renderer, &spritesTexture);
-            OxygenExtractor oxygenExtractor1(renderer, &spritesTexture);
-            OxygenExtractor oxygenExtractor2(renderer, &spritesTexture);
-            SolarFarm solarFarm0(renderer, &spritesTexture);
-            SolarFarm solarFarm1(renderer, &spritesTexture);
-            SolarFarm solarFarm2(renderer, &spritesTexture);
-            SolarFarm solarFarm3(renderer, &spritesTexture);
-            SolarFarm solarFarm4(renderer, &spritesTexture);
+            ElectrolysisPlant electrolysisPlant0(renderer, &spritesTexture, 0);
+            ElectrolysisPlant electrolysisPlant1(renderer, &spritesTexture, 1);
+            ElectrolysisPlant electrolysisPlant2(renderer, &spritesTexture, 2);
+            ElectrolysisPlant electrolysisPlant3(renderer, &spritesTexture, 3);
+            ElectrolysisPlant electrolysisPlant4(renderer, &spritesTexture, 4);
+            
+            FusionReactor fusionReactor0(renderer, &spritesTexture, 0);
+            FusionReactor fusionReactor1(renderer, &spritesTexture, 1);
+            FusionReactor fusionReactor2(renderer, &spritesTexture, 2);
+            FusionReactor fusionReactor3(renderer, &spritesTexture, 3);
+            FusionReactor fusionReactor4(renderer, &spritesTexture, 4);
 
-            electrolysisPlant0.setLevel(0);
-            electrolysisPlant1.setLevel(1);
-            electrolysisPlant2.setLevel(2);
-            electrolysisPlant3.setLevel(3);
-            electrolysisPlant4.setLevel(4);
-            
-            fusionReactor0.setLevel(0);
-            fusionReactor1.setLevel(1);
-            fusionReactor2.setLevel(2);
-            fusionReactor2.setLevel(3);
-            fusionReactor2.setLevel(4);
+            Habitat habitat0(renderer, &spritesTexture, 0);
+            Habitat habitat1(renderer, &spritesTexture, 1);
+            Habitat habitat2(renderer, &spritesTexture, 2);
+            Habitat habitat3(renderer, &spritesTexture, 3);
+            Habitat habitat4(renderer, &spritesTexture, 4);
 
-            habitat0.setLevel(0);
-            habitat1.setLevel(1);
-            habitat2.setLevel(3);
+            HydroponicGreenhouse hydroponicGreenhouse0(renderer, &spritesTexture, 0);
+            HydroponicGreenhouse hydroponicGreenhouse1(renderer, &spritesTexture, 1);
+            HydroponicGreenhouse hydroponicGreenhouse2(renderer, &spritesTexture, 2);
+            HydroponicGreenhouse hydroponicGreenhouse3(renderer, &spritesTexture, 3);
+            HydroponicGreenhouse hydroponicGreenhouse4(renderer, &spritesTexture, 4);
+
+            NuclearReactor nuclearReactor0(renderer, &spritesTexture, 0);
+            NuclearReactor nuclearReactor1(renderer, &spritesTexture, 1);
+            NuclearReactor nuclearReactor2(renderer, &spritesTexture, 2);
+            NuclearReactor nuclearReactor3(renderer, &spritesTexture, 3);
+            NuclearReactor nuclearReactor4(renderer, &spritesTexture, 4);
+
+            OxygenExtractor oxygenExtractor0(renderer, &spritesTexture, 0);
+            OxygenExtractor oxygenExtractor1(renderer, &spritesTexture, 1);
+            OxygenExtractor oxygenExtractor2(renderer, &spritesTexture, 2);
+            OxygenExtractor oxygenExtractor3(renderer, &spritesTexture, 3);
+            OxygenExtractor oxygenExtractor4(renderer, &spritesTexture, 4);
+
+            SolarFarm solarFarm0(renderer, &spritesTexture, 0);
+            SolarFarm solarFarm1(renderer, &spritesTexture, 1);
+            SolarFarm solarFarm2(renderer, &spritesTexture, 2);
+            SolarFarm solarFarm3(renderer, &spritesTexture, 3);
+            SolarFarm solarFarm4(renderer, &spritesTexture, 4);
             
-            hydroponicGreenhouse0.setLevel(0);
-            hydroponicGreenhouse1.setLevel(1);
-            hydroponicGreenhouse2.setLevel(3);
-            
-            nuclearReactor0.setLevel(0);
-            nuclearReactor1.setLevel(1);
-            nuclearReactor2.setLevel(3);
-            
-            oxygenExtractor0.setLevel(1);
-            oxygenExtractor1.setLevel(3);
-            oxygenExtractor2.setLevel(3);
-            
-            solarFarm0.setLevel(0);
-            solarFarm1.setLevel(1);
-            solarFarm2.setLevel(2);
-            solarFarm3.setLevel(3);
-            solarFarm4.setLevel(4);
+            Building* buildings[35] = {
+                &electrolysisPlant0,
+                &electrolysisPlant1,
+                &electrolysisPlant2,
+                &electrolysisPlant3,
+                &electrolysisPlant4,
+                &fusionReactor0,
+                &fusionReactor1,
+                &fusionReactor2,
+                &fusionReactor3,
+                &fusionReactor4,
+                &habitat0,
+                &habitat1,
+                &habitat2,
+                &habitat3,
+                &habitat4,
+                &hydroponicGreenhouse0,
+                &hydroponicGreenhouse1,
+                &hydroponicGreenhouse2,
+                &hydroponicGreenhouse3,
+                &hydroponicGreenhouse4,
+                &nuclearReactor0,
+                &nuclearReactor1,
+                &nuclearReactor2,
+                &nuclearReactor3,
+                &nuclearReactor4,
+                &oxygenExtractor0,
+                &oxygenExtractor1,
+                &oxygenExtractor2,
+                &oxygenExtractor3,
+                &oxygenExtractor4,
+                &solarFarm0,
+                &solarFarm1,
+                &solarFarm2,
+                &solarFarm3,
+                &solarFarm4
+            };
 
             baseMap.setScreenRect(screenMgr.getScreenRect());
 
@@ -364,38 +206,15 @@ void Game::run() {
                 }
 
                 SDL_RenderClear(renderer);
-//                for (auto tile: tiles) {
-//                    tile.render();
-//                }
+                
                 baseMap.render();
                 
-                electrolysisPlant0.render(2, 0);
-                electrolysisPlant1.render(3, 0);
-                electrolysisPlant2.render(4, 0);
-                electrolysisPlant3.render(5, 0);
-                electrolysisPlant4.render(6, 0);
-                
-                habitat0.render(2, 1);
-                habitat1.render(3, 1);
-                habitat2.render(4, 1);
-                
-                fusionReactor0.render(2, 2);
-                fusionReactor1.render(3, 2);
-                fusionReactor2.render(4, 2);
-                
-                nuclearReactor0.render(2, 3);
-                nuclearReactor1.render(3, 3);
-                nuclearReactor2.render(4, 3);
-                
-                hydroponicGreenhouse0.render(2, 4);
-                hydroponicGreenhouse1.render(3, 4);
-                hydroponicGreenhouse2.render(4, 4);
-                
-                oxygenExtractor0.render(2, 5);
-                oxygenExtractor1.render(3, 5);
-                oxygenExtractor2.render(4, 5);
-                
-                solarFarm0.render(0, 0);
+                for (int index = 0; index < 35; index++) {
+                    int row = index % 9;
+                    int col = index / 9;
+
+                    buildings[index]->render(row, col);
+                }
 
                 SDL_RenderPresent(renderer);
                 

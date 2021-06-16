@@ -1,17 +1,22 @@
 #ifndef GAME_H
 #define GAME_H
 
+using namespace std;
+
 #include <CoreFoundation/CFBundle.h>
 #include <cstdio>
 #include <string>
 #include <sstream>
+#include <vector>
 
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_ttf.h>
 
 #include "constants.hpp"
+#include "Base.hpp"
 #include "BaseMap.hpp"
+#include "Building.hpp"
 #include "Button.hpp"
 #include "ElectrolysisPlant.hpp"
 #include "FusionReactor.hpp"
@@ -32,6 +37,8 @@ public:
     bool loadAssets();
 
     bool init();
+    
+    void initMap();
     
     void run();
     

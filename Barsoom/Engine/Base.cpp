@@ -1,7 +1,7 @@
 #include "constants.hpp"
-#include "Colony.hpp"
+#include "Base.hpp"
 
-Colony::Colony(SDL_Renderer *renderer,
+Base::Base(SDL_Renderer *renderer,
            Texture *texture,
            int x,
            int y,
@@ -25,7 +25,7 @@ Colony::Colony(SDL_Renderer *renderer,
 //            }
 }
 
-void Colony::renderBg() {
+void Base::renderBg() {
     std::vector<Tile> tiles;
 //            Tile* icons = (Tile*)malloc(sizeof(Tile) * NUM_ICONS);
 

@@ -2,21 +2,15 @@
 #define HABITAT_H
 
 #include <SDL.h>
+
+#include "Building.hpp"
 #include "Texture.hpp"
 
-class Habitat {
+class Habitat: public Building {
 public:
-    Habitat(SDL_Renderer *renderer, Texture *texture);
+    Habitat(SDL_Renderer *renderer, Texture *texture, int level);
 
-    void render(int gridPositionX, int gridPositionY);
-    
-    void setLevel(int level);
-
-private:
-    SDL_Renderer *renderer;
-    Texture *texture;
-    SDL_Rect clip;
-    int level;
+    void render(int gridPositionX, int gridPositionY) override;
 };
 
 #endif

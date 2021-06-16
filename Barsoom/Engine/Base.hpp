@@ -1,12 +1,12 @@
-#ifndef BARSOOM_COLONY_H
-#define BARSOOM_COLONY_H
+#ifndef BASE_H
+#define BASE_H
 
 #include <SDL.h>
 #include "Tile.hpp"
 
-class Colony {
+class Base {
 public:
-    Colony(SDL_Renderer *renderer,
+    Base(SDL_Renderer *renderer,
            Texture *texture,
            int x,
            int y,
@@ -21,6 +21,7 @@ private:
     SDL_Renderer *renderer;
     Texture *texture;
     SDL_Rect clip;
+    
 };
 
 #endif

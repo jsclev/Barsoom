@@ -2,21 +2,15 @@
 #define ELECTROLYSIS_PLANT_H
 
 #include <SDL.h>
+
+#include "Building.hpp"
 #include "Texture.hpp"
 
-class ElectrolysisPlant {
+class ElectrolysisPlant: public Building {
 public:
-    ElectrolysisPlant(SDL_Renderer *renderer, Texture *texture);
-
-    void render(int gridPositionX, int gridPositionY);
+    ElectrolysisPlant(SDL_Renderer *renderer, Texture *texture, int level);
     
-    void setLevel(int level);
-
-private:
-    SDL_Renderer *renderer;
-    Texture *texture;
-    SDL_Rect clip;
-    int level;
+    void render(int gridPositionX, int gridPositionY) override;
 };
 
 #endif

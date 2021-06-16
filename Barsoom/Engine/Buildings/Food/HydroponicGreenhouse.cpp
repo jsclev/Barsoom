@@ -1,25 +1,15 @@
 #include "HydroponicGreenhouse.hpp"
 
-HydroponicGreenhouse::HydroponicGreenhouse(
-    SDL_Renderer *renderer,
-    Texture *texture) :
-    renderer(renderer),
-    texture(texture) {
+HydroponicGreenhouse::HydroponicGreenhouse(SDL_Renderer *renderer, Texture *texture, int level) :
+                                           Building(renderer, texture, level) {
     clip = {
-        0,
-        535,
-        300,
-        210
+        level * 329,
+        530,
+        329,
+        220
     };
-        
-    this->level = 0;
 }
 
 void HydroponicGreenhouse::render(int gridPositionX, int gridPositionY) {
     texture->render(renderer, gridPositionX * 300, gridPositionY * 300, &clip);
-}
-
-void HydroponicGreenhouse::setLevel(int level) {
-    this->level = level;
-    clip.x = 300 * level;
 }
