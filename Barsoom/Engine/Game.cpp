@@ -81,8 +81,6 @@ int Game::run() {
         } else {
 //            initMap();
             bool quit = false;
-            int offsetX = 0;
-            int offsetY = 0;
             std::vector<TileLayer> v;
             std::vector<Tile> tiles;
             ScreenManager screenMgr(renderer);
@@ -205,7 +203,6 @@ int Game::run() {
 
             SDL_Event e;
             SDL_Point touchPos = {0, 0};
-            SDL_Point touchOffset;
             SDL_Rect screenRect = screenMgr.getScreenRect();
             bool fingerDown = false;
 
@@ -230,9 +227,9 @@ int Game::run() {
                         
                         baseMap.startPan(touchPos);
                         
-//                        for (int i = 0; i < 50; i++) {
-//                            buildings[i]->handleTouch(touchPos.x, touchPos.y);
-//                        }
+                        for (int i = 0; i < 50; i++) {
+                            buildings[i]->startPan(touchPos);
+                        }
                     }
                     else if (e.type == SDL_FINGERMOTION) {
                         touchPos.x = e.tfinger.x * screenRect.w;
@@ -241,9 +238,9 @@ int Game::run() {
 
                         baseMap.pan(touchPos);
                         
-//                        for (int i = 0; i < 50; i++) {
-//                            buildings[i]->pan(touchPos);
-//                        }
+                        for (int i = 0; i < 50; i++) {
+                            buildings[i]->pan(touchPos);
+                        }
                         
                     }
                     else if (e.type == SDL_FINGERUP) {

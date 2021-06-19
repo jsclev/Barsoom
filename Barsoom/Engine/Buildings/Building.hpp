@@ -12,11 +12,11 @@ public:
     
     string getName();
     
-    void handleTouch(int touchX, int touchY);
+    void startPan(SDL_Point startPos);
     
     void log();
 
-    void pan(SDL_Point point);
+    void pan(SDL_Point position);
     
     void render(int gridPositionX, int gridPositionY);
 
@@ -27,6 +27,8 @@ protected:
     int level = 0;
     SDL_Rect spriteClip = {0, 0, 0, 0};
     SDL_Rect screenClip = {0, 0, 0, 0};
+    SDL_Point startPanPos;
+    SDL_Point startClipPos;
 };
 
 #endif
