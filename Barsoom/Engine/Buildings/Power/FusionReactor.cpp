@@ -1,15 +1,11 @@
 #include "FusionReactor.hpp"
 
 FusionReactor::FusionReactor(SDL_Renderer *renderer, Texture *texture, int level) :
-                             Building(renderer, texture, level) {
-     clip = {
-         0,
-         0,
-         300,
-         250
+                             Building(renderer, texture, "Fusion Reactor", level) {
+    spriteClip = {
+         290 * level,
+         1470,
+         290,
+         260
      };
-}
-
-void FusionReactor::render(int gridPositionX, int gridPositionY) {
-    texture->render(renderer, gridPositionX * 300, gridPositionY * 300, &clip);
 }

@@ -9,8 +9,6 @@
 class FusionReactor: public Building {
 public:
     FusionReactor(SDL_Renderer *renderer, Texture *texture, int level);
-
-    void render(int gridPositionX, int gridPositionY) override;
 };
 
 #endif

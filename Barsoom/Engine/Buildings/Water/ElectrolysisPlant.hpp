@@ -9,8 +9,6 @@
 class ElectrolysisPlant: public Building {
 public:
     ElectrolysisPlant(SDL_Renderer *renderer, Texture *texture, int level);
-    
-    void render(int gridPositionX, int gridPositionY) override;
 };
 
 #endif

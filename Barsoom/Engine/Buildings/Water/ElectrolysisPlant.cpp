@@ -1,39 +1,35 @@
 #include "ElectrolysisPlant.hpp"
 
 ElectrolysisPlant::ElectrolysisPlant(SDL_Renderer *renderer, Texture *texture, int level) :
-                                     Building(renderer, texture, level) {
+                                     Building(renderer, texture, "Electrolysis Plant", level) {
      if (level == 0) {
-         clip.x = 45;
-         clip.y = 1224;
-         clip.w = 166;
-         clip.h = 188;
+         spriteClip.x = 45;
+         spriteClip.y = 1224;
+         spriteClip.w = 166;
+         spriteClip.h = 188;
      }
      else if (level == 1) {
-         clip.x = 295;
-         clip.y = 1224;
-         clip.w = 247;
-         clip.h = 213;
+         spriteClip.x = 295;
+         spriteClip.y = 1224;
+         spriteClip.w = 247;
+         spriteClip.h = 213;
      }
      else if (level == 2) {
-         clip.x = 604;
-         clip.y = 1232;
-         clip.w = 248;
-         clip.h = 212;
+         spriteClip.x = 604;
+         spriteClip.y = 1232;
+         spriteClip.w = 248;
+         spriteClip.h = 212;
      }
      else if (level == 3) {
-         clip.x = 904;
-         clip.y = 1234;
-         clip.w = 255;
-         clip.h = 214;
+         spriteClip.x = 904;
+         spriteClip.y = 1234;
+         spriteClip.w = 255;
+         spriteClip.h = 214;
      }
      else if (level == 4) {
-         clip.x = 1214;
-         clip.y = 1235;
-         clip.w = 256;
-         clip.h = 214;
+         spriteClip.x = 1214;
+         spriteClip.y = 1235;
+         spriteClip.w = 256;
+         spriteClip.h = 214;
      }
-}
-
-void ElectrolysisPlant::render(int gridPositionX, int gridPositionY) {
-    texture->render(renderer, gridPositionX * 300, gridPositionY * 300, &clip);
 }

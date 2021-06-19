@@ -1,26 +1,14 @@
 #include "ScreenManager.hpp"
 
 ScreenManager::ScreenManager(SDL_Renderer *renderer) : renderer(renderer) {
-    
-}
-
-SDL_Window* ScreenManager::createWindow() {
-//    SDL_SetHint(SDL_HINT_ORIENTATIONS, "LandscapeLeft LandscapeRight");
-    
-    Uint32 flags = SDL_WINDOW_SHOWN |
-                   SDL_WINDOW_FULLSCREEN |
-                   SDL_WINDOW_ALLOW_HIGHDPI;
-    
-    // TODO Need to implement an error handler here
-    return SDL_CreateWindow(GAME_NAME,
-                            SDL_WINDOWPOS_UNDEFINED,
-                            SDL_WINDOWPOS_UNDEFINED,
-                            0,
-                            0,
-                            flags);
+    reset();
 }
 
 SDL_Rect ScreenManager::getScreenRect() {
+    return screenRect;
+}
+
+void ScreenManager::reset() {
     int w = 0;
     int h = 0;
     
@@ -35,7 +23,7 @@ SDL_Rect ScreenManager::getScreenRect() {
     }
     
     // TODO Need to implement an error handler here
-    return {0, 0, w, h};
+    screenRect = {0, 0, w, h};
 }
 
 int ScreenManager::getWindowMultiplier() {

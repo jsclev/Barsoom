@@ -11,8 +11,18 @@ bool Game::init() {
         SDL_Log("SDL could not initialize! %s\n", SDL_GetError());
         success = false;
     } else {
-        ScreenManager screenMgr(renderer);
-        window = screenMgr.createWindow();
+        // SDL_SetHint(SDL_HINT_ORIENTATIONS, "LandscapeLeft LandscapeRight");
+        Uint32 flags = SDL_WINDOW_SHOWN |
+                       SDL_WINDOW_FULLSCREEN |
+                       SDL_WINDOW_ALLOW_HIGHDPI;
+        
+        // TODO Need to implement an error handler here
+        window = SDL_CreateWindow(GAME_NAME,
+                                SDL_WINDOWPOS_UNDEFINED,
+                                SDL_WINDOWPOS_UNDEFINED,
+                                0,
+                                0,
+                                flags);
         
         if (window == NULL) {
             SDL_Log( "Window could not be created! SDL Error: %s\n", SDL_GetError() );
@@ -22,12 +32,14 @@ bool Game::init() {
         if (window == nullptr) {
             SDL_Log("Window could not be created! SDL Error: %s\n", SDL_GetError());
             success = false;
-        } else {
+        }
+        else {
             renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
             if (renderer == nullptr) {
                 SDL_Log("Renderer could not be created! SDL Error: %s\n", SDL_GetError());
                 success = false;
-            } else {
+            }
+            else {
                 SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0x00);
 
                 int imgFlags = IMG_INIT_PNG | IMG_INIT_JPG;
@@ -50,30 +62,31 @@ bool Game::init() {
 bool Game::loadAssets() {
     bool success = true;
     
-    if (!spritesTexture.loadFromFile(
-            renderer,
-            "buildings_spritesheet.png")) {
+    if (!spritesTexture.loadFromFile(renderer, "buildings_spritesheet.png")) {
         SDL_Log("Failed to load sprite sheet texture!\n");
-
         success = false;
     }
 
     return success;
 }
 
-void Game::run() {
+int Game::run() {
     if (!init()) {
         SDL_Log("Failed to initialize!\n");
+        return 1;
     } else {
         if (!loadAssets()) {
             SDL_Log("Failed to load media!\n");
+            return 1;
         } else {
 //            initMap();
             bool quit = false;
+            int offsetX = 0;
+            int offsetY = 0;
             std::vector<TileLayer> v;
             std::vector<Tile> tiles;
             ScreenManager screenMgr(renderer);
-            BaseMap baseMap(renderer);
+            BaseMap baseMap(renderer, screenMgr);
             
             ElectrolysisPlant electrolysisPlant0(renderer, &spritesTexture, 0);
             ElectrolysisPlant electrolysisPlant1(renderer, &spritesTexture, 1);
@@ -99,6 +112,12 @@ void Game::run() {
             HydroponicGreenhouse hydroponicGreenhouse3(renderer, &spritesTexture, 3);
             HydroponicGreenhouse hydroponicGreenhouse4(renderer, &spritesTexture, 4);
 
+            MetalExtractor metalExtractor0(renderer, &spritesTexture, 0);
+            MetalExtractor metalExtractor1(renderer, &spritesTexture, 1);
+            MetalExtractor metalExtractor2(renderer, &spritesTexture, 2);
+            MetalExtractor metalExtractor3(renderer, &spritesTexture, 3);
+            MetalExtractor metalExtractor4(renderer, &spritesTexture, 4);
+            
             NuclearReactor nuclearReactor0(renderer, &spritesTexture, 0);
             NuclearReactor nuclearReactor1(renderer, &spritesTexture, 1);
             NuclearReactor nuclearReactor2(renderer, &spritesTexture, 2);
@@ -111,13 +130,25 @@ void Game::run() {
             OxygenExtractor oxygenExtractor3(renderer, &spritesTexture, 3);
             OxygenExtractor oxygenExtractor4(renderer, &spritesTexture, 4);
 
+            Refinery refinery0(renderer, &spritesTexture, 0);
+            Refinery refinery1(renderer, &spritesTexture, 1);
+            Refinery refinery2(renderer, &spritesTexture, 2);
+            Refinery refinery3(renderer, &spritesTexture, 3);
+            Refinery refinery4(renderer, &spritesTexture, 4);
+            
             SolarFarm solarFarm0(renderer, &spritesTexture, 0);
             SolarFarm solarFarm1(renderer, &spritesTexture, 1);
             SolarFarm solarFarm2(renderer, &spritesTexture, 2);
             SolarFarm solarFarm3(renderer, &spritesTexture, 3);
             SolarFarm solarFarm4(renderer, &spritesTexture, 4);
             
-            Building* buildings[35] = {
+            WaterRecycler waterRecycler0(renderer, &spritesTexture, 0);
+            WaterRecycler waterRecycler1(renderer, &spritesTexture, 1);
+            WaterRecycler waterRecycler2(renderer, &spritesTexture, 2);
+            WaterRecycler waterRecycler3(renderer, &spritesTexture, 3);
+            WaterRecycler waterRecycler4(renderer, &spritesTexture, 4);
+            
+            Building* buildings[50] = {
                 &electrolysisPlant0,
                 &electrolysisPlant1,
                 &electrolysisPlant2,
@@ -138,6 +169,11 @@ void Game::run() {
                 &hydroponicGreenhouse2,
                 &hydroponicGreenhouse3,
                 &hydroponicGreenhouse4,
+                &metalExtractor0,
+                &metalExtractor1,
+                &metalExtractor2,
+                &metalExtractor3,
+                &metalExtractor4,
                 &nuclearReactor0,
                 &nuclearReactor1,
                 &nuclearReactor2,
@@ -148,25 +184,30 @@ void Game::run() {
                 &oxygenExtractor2,
                 &oxygenExtractor3,
                 &oxygenExtractor4,
+                &refinery0,
+                &refinery1,
+                &refinery2,
+                &refinery3,
+                &refinery4,
                 &solarFarm0,
                 &solarFarm1,
                 &solarFarm2,
                 &solarFarm3,
-                &solarFarm4
+                &solarFarm4,
+                &waterRecycler0,
+                &waterRecycler1,
+                &waterRecycler2,
+                &waterRecycler3,
+                &waterRecycler4
             };
-
-            baseMap.setScreenRect(screenMgr.getScreenRect());
-
-            Button button = Button(renderer,
-                                   &spritesTexture,
-                                   50,
-                                   50,
-                                   gButtonClips[MAIN_BUTTON]);
 
             srand((unsigned) time(0));
 
             SDL_Event e;
-            SDL_Point touchLocation = { gScreenRect.w / 2, gScreenRect.h / 2 };
+            SDL_Point touchPos = {0, 0};
+            SDL_Point touchOffset;
+            SDL_Rect screenRect = screenMgr.getScreenRect();
+            bool fingerDown = false;
 
             Timer fpsTimer;
             Timer capTimer;
@@ -175,27 +216,52 @@ void Game::run() {
             fpsTimer.start();
             
             SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0x00);
-
+            
             while (!quit) {
                 capTimer.start();
-
+                
                 while (SDL_PollEvent(&e) != 0) {
                     if (e.type == SDL_QUIT) {
                         quit = true;
                     }
+                    else if (e.type == SDL_FINGERDOWN) {
+                        touchPos.x = e.tfinger.x * screenRect.w;
+                        touchPos.y = e.tfinger.y * screenRect.h;
+                        
+                        baseMap.startPan(touchPos);
+                        
+//                        for (int i = 0; i < 50; i++) {
+//                            buildings[i]->handleTouch(touchPos.x, touchPos.y);
+//                        }
+                    }
                     else if (e.type == SDL_FINGERMOTION) {
-                        touchLocation.x = e.tfinger.x * gScreenRect.w;
-                        touchLocation.y = e.tfinger.y * gScreenRect.h;
+                        touchPos.x = e.tfinger.x * screenRect.w;
+                        touchPos.y = e.tfinger.y * screenRect.h;
+//                        SDL_Log("Touch location is %i, %i", touchPos.x, touchPos.y);
+
+                        baseMap.pan(touchPos);
+                        
+//                        for (int i = 0; i < 50; i++) {
+//                            buildings[i]->pan(touchPos);
+//                        }
+                        
                     }
                     else if (e.type == SDL_FINGERUP) {
-                        touchLocation.x = e.tfinger.x * gScreenRect.w;
-                        touchLocation.y = e.tfinger.y * gScreenRect.h;
-                        
-                        button.handleEvent(&e, &tiles, gTileClips);
+                        if (fingerDown) {
+                            touchPos.x = e.tfinger.x * screenRect.w;
+                            touchPos.y = e.tfinger.y * screenRect.h;
+                                
+//                            for (int i = 0; i < 50; i++) {
+//                                buildings[i]->handleTouch(touchPos.x, touchPos.y);
+//                            }
+                        }
                     }
                     else if (e.type == SDL_WINDOWEVENT) {
                         if (e.window.event == SDL_WINDOWEVENT_SIZE_CHANGED) {
-                            baseMap.setScreenRect(screenMgr.getScreenRect());
+//                            screenMgr.reset();
+//                            screenRect = screenMgr.getScreenRect();
+//                            baseMap.setClip({offsetX, offsetY, screenRect.w, screenRect.h});
+//                            SDL_Log("Reset the screen.");
                         }
                     }
                 }
@@ -209,11 +275,11 @@ void Game::run() {
                 
                 baseMap.render();
                 
-                for (int index = 0; index < 35; index++) {
-                    int row = index % 9;
-                    int col = index / 9;
+                for (int i = 0; i < 50; i++) {
+                    int row = i % 9;
+                    int col = i / 9;
 
-                    buildings[index]->render(row, col);
+                    buildings[i]->render(row, col);
                 }
 
                 SDL_RenderPresent(renderer);
@@ -229,6 +295,8 @@ void Game::run() {
     }
 
     quit();
+    
+    return 0;
 }
 
 void Game::quit() {

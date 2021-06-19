@@ -9,8 +9,6 @@
 class NuclearReactor: public Building {
 public:
     NuclearReactor(SDL_Renderer *renderer, Texture *texture, int level);
-
-    void render(int gridPositionX, int gridPositionY) override;
 };
 
 #endif

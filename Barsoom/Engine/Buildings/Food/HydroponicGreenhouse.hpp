@@ -9,8 +9,6 @@
 class HydroponicGreenhouse: public Building {
 public:
     HydroponicGreenhouse(SDL_Renderer *renderer, Texture *texture, int level);
-
-    void render(int gridPositionX, int gridPositionY) override;
 };
 
 #endif

@@ -1,15 +1,11 @@
 #include "Habitat.hpp"
 
 Habitat::Habitat(SDL_Renderer *renderer, Texture *texture, int level) :
-                 Building(renderer, texture, level) {
-    clip = {
-        0,
+                 Building(renderer, texture, "Habitat", level) {
+    spriteClip = {
+        329 * level,
         250,
-        300,
+        319,
         300
     };
-}
-
-void Habitat::render(int gridPositionX, int gridPositionY) {
-    texture->render(renderer, gridPositionX * 300, gridPositionY * 300, &clip);
 }

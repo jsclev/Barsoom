@@ -92,6 +92,9 @@ void Texture::setAlpha(Uint8 alpha) {
 void Texture::render(SDL_Renderer *renderer, int x, int y, SDL_Rect *clip) {
     SDL_Rect destinationRect = {x, y, width, height};
 
+    // We do not want to stretch the clip when we render to the
+    // destination, so we make sure to set the source and destination
+    // width and height to be equal.
     if (clip != nullptr) {
         destinationRect.w = clip->w;
         destinationRect.h = clip->h;

@@ -4,7 +4,8 @@
 
 int main(__unused int argc, __unused char *args[]) {
     Game game = Game();
-    game.run();
     
-    return 0;
+    int result = game.run();
+    
+    return result;
 }

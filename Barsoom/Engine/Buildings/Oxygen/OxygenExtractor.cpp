@@ -1,15 +1,11 @@
 #include "OxygenExtractor.hpp"
 
 OxygenExtractor::OxygenExtractor(SDL_Renderer *renderer, Texture *texture, int level) :
-                                 Building(renderer, texture, level) {
-     clip = {
+                                 Building(renderer, texture, "Oxygen Extractor", level) {
+     spriteClip = {
+         329 * level,
          0,
-         0,
-         300,
+         329,
          250
      };
-}
-
-void OxygenExtractor::render(int gridPositionX, int gridPositionY) {
-    texture->render(renderer, gridPositionX * 300, gridPositionY * 300, &clip);
 }

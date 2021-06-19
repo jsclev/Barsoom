@@ -9,8 +9,6 @@
 class SolarFarm: public Building {
 public:
     SolarFarm(SDL_Renderer *renderer, Texture *texture, int level);
-    
-    void render(int gridPositionX, int gridPositionY) override;
 };
 
 #endif

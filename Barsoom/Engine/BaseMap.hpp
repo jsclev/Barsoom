@@ -3,23 +3,28 @@
 
 #include <SDL.h>
 #include "constants.hpp"
+#include "ScreenManager.hpp"
 #include "Texture.hpp"
 
 class BaseMap
 {
 public:
-    BaseMap(SDL_Renderer *renderer);
+    BaseMap(SDL_Renderer *renderer, ScreenManager screenManager);
+    
+    ~BaseMap();
 
-    void setScreenRect(SDL_Rect screenRect);
+    void startPan(SDL_Point startPos);
+    
+    void pan(SDL_Point position);
     
     void render();
 
 private:
     SDL_Renderer *renderer;
-    Texture mapTexture;
-    SDL_Rect mapClip;
-    const int MAP_IMAGE_WIDTH = 8192;
-    const int MAP_IMAGE_HEIGHT = 4096;
+    Texture texture;
+    SDL_Rect *clip;
+    SDL_Point startPanPos;
+    SDL_Point startClipPos;
 };
 
 #endif

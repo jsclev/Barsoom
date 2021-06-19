@@ -33,6 +33,16 @@
 		5231415A265A2A2D00C5044C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52314159265A2A2D00C5044C /* main.cpp */; };
 		5231415B265A2A2D00C5044C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52314159265A2A2D00C5044C /* main.cpp */; };
 		5231415C265A2A2D00C5044C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52314159265A2A2D00C5044C /* main.cpp */; };
+		527615BB267AE11B00873D31 /* WaterRecycler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 527615B9267AE11B00873D31 /* WaterRecycler.cpp */; };
+		527615BC267AE11B00873D31 /* WaterRecycler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 527615B9267AE11B00873D31 /* WaterRecycler.cpp */; };
+		527615BD267AE11B00873D31 /* WaterRecycler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 527615B9267AE11B00873D31 /* WaterRecycler.cpp */; };
+		527615D8267AFC5200873D31 /* Refinery.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 527615D6267AFC5200873D31 /* Refinery.cpp */; };
+		527615D9267AFC5200873D31 /* Refinery.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 527615D6267AFC5200873D31 /* Refinery.cpp */; };
+		527615DA267AFC5200873D31 /* Refinery.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 527615D6267AFC5200873D31 /* Refinery.cpp */; };
+		527615DD267B1EB300873D31 /* MetalExtractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 527615DB267B1EB300873D31 /* MetalExtractor.cpp */; };
+		527615DE267B1EB300873D31 /* MetalExtractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 527615DB267B1EB300873D31 /* MetalExtractor.cpp */; };
+		527615DF267B1EB300873D31 /* MetalExtractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 527615DB267B1EB300873D31 /* MetalExtractor.cpp */; };
+		527615E0267B26EB00873D31 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A226A1265B857100E7208C /* OpenGLES.framework */; };
 		5282B8D2266A0B5A008E0F26 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5282B8A5266A0ACD008E0F26 /* libSDL2.a */; };
 		5282B8D3266A0B5A008E0F26 /* libSDL2_image.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5282B8BF266A0AE9008E0F26 /* libSDL2_image.a */; };
 		5282B8D4266A0B5A008E0F26 /* libSDL2_ttf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5282B8CD266A0B03008E0F26 /* libSDL2_ttf.a */; };
@@ -51,7 +61,6 @@
 		52A2269C265B854B00E7208C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A2269B265B854B00E7208C /* Foundation.framework */; };
 		52A2269E265B855700E7208C /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A2269D265B855700E7208C /* GameController.framework */; };
 		52A226A0265B856200E7208C /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A2269F265B856200E7208C /* Metal.framework */; };
-		52A226A2265B857100E7208C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A226A1265B857100E7208C /* OpenGLES.framework */; };
 		52A226A4265B857C00E7208C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A226A3265B857C00E7208C /* QuartzCore.framework */; };
 		52A226A6265B858800E7208C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A226A5265B858800E7208C /* UIKit.framework */; };
 		52A226A8265B868600E7208C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A226A7265B868600E7208C /* ImageIO.framework */; };
@@ -523,6 +532,12 @@
 		52314148265A2A0800C5044C /* Texture.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Texture.hpp; sourceTree = "<group>"; };
 		52314149265A2A0800C5044C /* Tile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tile.cpp; sourceTree = "<group>"; };
 		52314159265A2A2D00C5044C /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		527615B9267AE11B00873D31 /* WaterRecycler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WaterRecycler.cpp; sourceTree = "<group>"; };
+		527615BA267AE11B00873D31 /* WaterRecycler.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WaterRecycler.hpp; sourceTree = "<group>"; };
+		527615D6267AFC5200873D31 /* Refinery.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Refinery.cpp; sourceTree = "<group>"; };
+		527615D7267AFC5200873D31 /* Refinery.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Refinery.hpp; sourceTree = "<group>"; };
+		527615DB267B1EB300873D31 /* MetalExtractor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MetalExtractor.cpp; sourceTree = "<group>"; };
+		527615DC267B1EB300873D31 /* MetalExtractor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MetalExtractor.hpp; sourceTree = "<group>"; };
 		5282B884266A03B0008E0F26 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 		5282B886266A062F008E0F26 /* libSDL2_image.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2_image.a; path = lib/ios/libSDL2_image.a; sourceTree = "<group>"; };
 		5282B887266A062F008E0F26 /* libSDL2_ttf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2_ttf.a; path = lib/ios/libSDL2_ttf.a; sourceTree = "<group>"; };
@@ -722,7 +737,7 @@
 				52A2269E265B855700E7208C /* GameController.framework in Frameworks */,
 				52A226A8265B868600E7208C /* ImageIO.framework in Frameworks */,
 				52A226A0265B856200E7208C /* Metal.framework in Frameworks */,
-				52A226A2265B857100E7208C /* OpenGLES.framework in Frameworks */,
+				527615E0267B26EB00873D31 /* OpenGLES.framework in Frameworks */,
 				52A226A4265B857C00E7208C /* QuartzCore.framework in Frameworks */,
 				52A226A6265B858800E7208C /* UIKit.framework in Frameworks */,
 			);
@@ -862,6 +877,17 @@
 				52314144265A2A0800C5044C /* Timer.hpp */,
 			);
 			path = Engine;
+			sourceTree = "<group>";
+		};
+		527615D5267AF6CF00873D31 /* Ore Resources */ = {
+			isa = PBXGroup;
+			children = (
+				527615D6267AFC5200873D31 /* Refinery.cpp */,
+				527615D7267AFC5200873D31 /* Refinery.hpp */,
+				527615DB267B1EB300873D31 /* MetalExtractor.cpp */,
+				527615DC267B1EB300873D31 /* MetalExtractor.hpp */,
+			);
+			path = "Ore Resources";
 			sourceTree = "<group>";
 		};
 		5282B88D266A0ACC008E0F26 /* Products */ = {
@@ -1128,6 +1154,7 @@
 			children = (
 				52C23D792676850B00356942 /* Food */,
 				52C23D852676D25900356942 /* Habitation */,
+				527615D5267AF6CF00873D31 /* Ore Resources */,
 				52C23D862676D3E800356942 /* Oxygen */,
 				52C23D78267684F100356942 /* Power */,
 				52C23D7F2676D0A400356942 /* Water */,
@@ -1164,6 +1191,8 @@
 			children = (
 				52C23D802676D0FB00356942 /* ElectrolysisPlant.cpp */,
 				52C23D812676D0FB00356942 /* ElectrolysisPlant.hpp */,
+				527615B9267AE11B00873D31 /* WaterRecycler.cpp */,
+				527615BA267AE11B00873D31 /* WaterRecycler.hpp */,
 			);
 			path = Water;
 			sourceTree = "<group>";
@@ -1733,6 +1762,7 @@
 				52314150265A2A0800C5044C /* Texture.cpp in Sources */,
 				52314153265A2A0800C5044C /* TileLayer.cpp in Sources */,
 				5231414A265A2A0800C5044C /* Button.cpp in Sources */,
+				527615D8267AFC5200873D31 /* Refinery.cpp in Sources */,
 				52C23D822676D0FB00356942 /* ElectrolysisPlant.cpp in Sources */,
 				5231414D265A2A0800C5044C /* Timer.cpp in Sources */,
 				5231415A265A2A2D00C5044C /* main.cpp in Sources */,
@@ -1745,6 +1775,8 @@
 				52C23D8E267700FC00356942 /* SolarFarm.cpp in Sources */,
 				52C23D9326770E9F00356942 /* Building.cpp in Sources */,
 				52C23D752675FB1100356942 /* Habitat.cpp in Sources */,
+				527615BB267AE11B00873D31 /* WaterRecycler.cpp in Sources */,
+				527615DD267B1EB300873D31 /* MetalExtractor.cpp in Sources */,
 				528D7639265F3D1700B5C44D /* Base.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1763,10 +1795,13 @@
 				52C23D9426770E9F00356942 /* Building.cpp in Sources */,
 				52C23D8A2676D42E00356942 /* OxygenExtractor.cpp in Sources */,
 				52C23D832676D0FB00356942 /* ElectrolysisPlant.cpp in Sources */,
+				527615DE267B1EB300873D31 /* MetalExtractor.cpp in Sources */,
 				52C23D762675FB1100356942 /* Habitat.cpp in Sources */,
 				5231415B265A2A2D00C5044C /* main.cpp in Sources */,
 				523140F9265A1B1A00C5044C /* BarsoomTests.swift in Sources */,
+				527615D9267AFC5200873D31 /* Refinery.cpp in Sources */,
 				52C23D7D2676854400356942 /* FusionReactor.cpp in Sources */,
+				527615BC267AE11B00873D31 /* WaterRecycler.cpp in Sources */,
 				52C23D8F267700FC00356942 /* SolarFarm.cpp in Sources */,
 				52F37833266E5BD40011D9C6 /* BaseMap.cpp in Sources */,
 				52C23D712675F4CA00356942 /* HydroponicGreenhouse.cpp in Sources */,
@@ -1789,10 +1824,13 @@
 				52C23D9526770E9F00356942 /* Building.cpp in Sources */,
 				52C23D8B2676D42E00356942 /* OxygenExtractor.cpp in Sources */,
 				52C23D842676D0FB00356942 /* ElectrolysisPlant.cpp in Sources */,
+				527615DF267B1EB300873D31 /* MetalExtractor.cpp in Sources */,
 				52C23D772675FB1100356942 /* Habitat.cpp in Sources */,
 				5231415C265A2A2D00C5044C /* main.cpp in Sources */,
 				52314104265A1B1A00C5044C /* BarsoomUITests.swift in Sources */,
+				527615DA267AFC5200873D31 /* Refinery.cpp in Sources */,
 				52C23D7E2676854400356942 /* FusionReactor.cpp in Sources */,
+				527615BD267AE11B00873D31 /* WaterRecycler.cpp in Sources */,
 				52C23D90267700FC00356942 /* SolarFarm.cpp in Sources */,
 				52F37834266E5BD40011D9C6 /* BaseMap.cpp in Sources */,
 				52C23D722675F4CA00356942 /* HydroponicGreenhouse.cpp in Sources */,

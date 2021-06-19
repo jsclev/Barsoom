@@ -15,8 +15,11 @@ public:
     
     int getWindowMultiplier();
     
+    void reset();
+    
 private:
     SDL_Renderer *renderer;
+    SDL_Rect screenRect;
 };
 
 #endif
