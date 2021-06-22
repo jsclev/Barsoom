@@ -22,8 +22,6 @@ void Button::handleEvent(SDL_Event *e, std::vector<Tile> *tiles, SDL_Rect tileCl
     SDL_Rect iconClip;
     iconClip.x = 2302; //7 + TILE_WIDTH * 8 + ICON_WIDTH * 0;
     iconClip.y = 2; //ICON_HEIGHT * 0;
-    iconClip.w = ICON_WIDTH;
-    iconClip.h = ICON_HEIGHT;
 
     tiles->clear();
     for (int row = 0; row < NUM_ROWS; row++) {

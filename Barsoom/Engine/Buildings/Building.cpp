@@ -49,7 +49,7 @@ void Building::pan(SDL_Point position) {
         screenClip.y = startClipPos.y - (position.y - startPanPos.y);
     }
     
-    SDL_Log("New clip is at (%i, %i) and is (%i, %i)", screenClip.x, screenClip.y, screenClip.w, screenClip.h);
+//    SDL_Log("New clip is at (%i, %i) and is (%i, %i)", screenClip.x, screenClip.y, screenClip.w, screenClip.h);
 }
 
 void Building::render(int gridPositionX, int gridPositionY) {

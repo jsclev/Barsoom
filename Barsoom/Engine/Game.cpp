@@ -202,9 +202,9 @@ int Game::run() {
             srand((unsigned) time(0));
 
             SDL_Event e;
-            SDL_Point touchPos = {0, 0};
+            SDL_Point prevTouchPos = {-1, -1};
+            SDL_Point touchPos = {-1, -1};
             SDL_Rect screenRect = screenMgr.getScreenRect();
-            bool fingerDown = false;
 
             Timer fpsTimer;
             Timer capTimer;
@@ -236,22 +236,23 @@ int Game::run() {
                         touchPos.y = e.tfinger.y * screenRect.h;
 //                        SDL_Log("Touch location is %i, %i", touchPos.x, touchPos.y);
 
-                        baseMap.pan(touchPos);
+                        baseMap.pan(touchPos, prevTouchPos);
                         
                         for (int i = 0; i < 50; i++) {
                             buildings[i]->pan(touchPos);
                         }
                         
+                        prevTouchPos.x = touchPos.x;
+                        prevTouchPos.y = touchPos.y;
                     }
                     else if (e.type == SDL_FINGERUP) {
-                        if (fingerDown) {
-                            touchPos.x = e.tfinger.x * screenRect.w;
-                            touchPos.y = e.tfinger.y * screenRect.h;
-                                
+                        touchPos.x = e.tfinger.x * screenRect.w;
+                        touchPos.y = e.tfinger.y * screenRect.h;
+                        
+                        baseMap.stopPan(touchPos);
 //                            for (int i = 0; i < 50; i++) {
 //                                buildings[i]->handleTouch(touchPos.x, touchPos.y);
 //                            }
-                        }
                     }
                     else if (e.type == SDL_WINDOWEVENT) {
                         if (e.window.event == SDL_WINDOWEVENT_SIZE_CHANGED) {
@@ -272,12 +273,12 @@ int Game::run() {
                 
                 baseMap.render();
                 
-                for (int i = 0; i < 50; i++) {
-                    int row = i % 9;
-                    int col = i / 9;
-
-                    buildings[i]->render(row, col);
-                }
+//                for (int i = 0; i < 50; i++) {
+//                    int row = i % 9;
+//                    int col = i / 9;
+//
+//                    buildings[i]->render(row, col);
+//                }
 
                 SDL_RenderPresent(renderer);
                 

@@ -346,6 +346,9 @@
 		52C23D9326770E9F00356942 /* Building.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52C23D9126770E9F00356942 /* Building.cpp */; };
 		52C23D9426770E9F00356942 /* Building.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52C23D9126770E9F00356942 /* Building.cpp */; };
 		52C23D9526770E9F00356942 /* Building.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52C23D9126770E9F00356942 /* Building.cpp */; };
+		52E508ED268050A700ABC60B /* BgMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52E508EB268050A700ABC60B /* BgMap.cpp */; };
+		52E508EE268050A700ABC60B /* BgMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52E508EB268050A700ABC60B /* BgMap.cpp */; };
+		52E508EF268050A700ABC60B /* BgMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52E508EB268050A700ABC60B /* BgMap.cpp */; };
 		52EC1A34265DFFD500F6347E /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EC1A33265DFFD500F6347E /* CoreServices.framework */; };
 		52EC1A36265EB51500F6347E /* mars_terrain.png in Resources */ = {isa = PBXBuildFile; fileRef = 52EC1A35265EB51500F6347E /* mars_terrain.png */; };
 		52EC1A37265EB51500F6347E /* mars_terrain.png in Resources */ = {isa = PBXBuildFile; fileRef = 52EC1A35265EB51500F6347E /* mars_terrain.png */; };
@@ -711,6 +714,8 @@
 		52C23D8D267700FC00356942 /* SolarFarm.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SolarFarm.hpp; sourceTree = "<group>"; };
 		52C23D9126770E9F00356942 /* Building.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Building.cpp; sourceTree = "<group>"; };
 		52C23D9226770E9F00356942 /* Building.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Building.hpp; sourceTree = "<group>"; };
+		52E508EB268050A700ABC60B /* BgMap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BgMap.cpp; sourceTree = "<group>"; };
+		52E508EC268050A700ABC60B /* BgMap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BgMap.hpp; sourceTree = "<group>"; };
 		52EC1A33265DFFD500F6347E /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		52EC1A35265EB51500F6347E /* mars_terrain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mars_terrain.png; sourceTree = "<group>"; };
 		52F37830266E5BD40011D9C6 /* BaseMap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BaseMap.cpp; sourceTree = "<group>"; };
@@ -855,9 +860,9 @@
 		5231413E265A2A0800C5044C /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				52E508F026805DA100ABC60B /* Views */,
+				52E508EA26804F9A00ABC60B /* Models */,
 				52C23D682675D27000356942 /* Buildings */,
-				52F37830266E5BD40011D9C6 /* BaseMap.cpp */,
-				52F37831266E5BD40011D9C6 /* BaseMap.hpp */,
 				52314140265A2A0800C5044C /* Button.cpp */,
 				52314147265A2A0800C5044C /* Button.hpp */,
 				528D7637265F3D1700B5C44D /* Base.cpp */,
@@ -1213,6 +1218,24 @@
 				52C23D882676D42E00356942 /* OxygenExtractor.hpp */,
 			);
 			path = Oxygen;
+			sourceTree = "<group>";
+		};
+		52E508EA26804F9A00ABC60B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52E508EB268050A700ABC60B /* BgMap.cpp */,
+				52E508EC268050A700ABC60B /* BgMap.hpp */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52E508F026805DA100ABC60B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52F37831266E5BD40011D9C6 /* BaseMap.hpp */,
+				52F37830266E5BD40011D9C6 /* BaseMap.cpp */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1761,6 +1784,7 @@
 				528D7653265F409E00B5C44D /* Game.cpp in Sources */,
 				52314150265A2A0800C5044C /* Texture.cpp in Sources */,
 				52314153265A2A0800C5044C /* TileLayer.cpp in Sources */,
+				52E508ED268050A700ABC60B /* BgMap.cpp in Sources */,
 				5231414A265A2A0800C5044C /* Button.cpp in Sources */,
 				527615D8267AFC5200873D31 /* Refinery.cpp in Sources */,
 				52C23D822676D0FB00356942 /* ElectrolysisPlant.cpp in Sources */,
@@ -1799,6 +1823,7 @@
 				52C23D762675FB1100356942 /* Habitat.cpp in Sources */,
 				5231415B265A2A2D00C5044C /* main.cpp in Sources */,
 				523140F9265A1B1A00C5044C /* BarsoomTests.swift in Sources */,
+				52E508EE268050A700ABC60B /* BgMap.cpp in Sources */,
 				527615D9267AFC5200873D31 /* Refinery.cpp in Sources */,
 				52C23D7D2676854400356942 /* FusionReactor.cpp in Sources */,
 				527615BC267AE11B00873D31 /* WaterRecycler.cpp in Sources */,
@@ -1828,6 +1853,7 @@
 				52C23D772675FB1100356942 /* Habitat.cpp in Sources */,
 				5231415C265A2A2D00C5044C /* main.cpp in Sources */,
 				52314104265A1B1A00C5044C /* BarsoomUITests.swift in Sources */,
+				52E508EF268050A700ABC60B /* BgMap.cpp in Sources */,
 				527615DA267AFC5200873D31 /* Refinery.cpp in Sources */,
 				52C23D7E2676854400356942 /* FusionReactor.cpp in Sources */,
 				527615BD267AE11B00873D31 /* WaterRecycler.cpp in Sources */,
@@ -2003,7 +2029,7 @@
 					"/Users/john/projects/SDL/SDL2_ttf-2.0.15",
 				);
 				INFOPLIST_FILE = Barsoom/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2038,7 +2064,7 @@
 					"/Users/john/projects/SDL/SDL2_ttf-2.0.15",
 				);
 				INFOPLIST_FILE = Barsoom/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
