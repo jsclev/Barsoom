@@ -2,7 +2,8 @@
 
 BgMap::BgMap(int mapWidth,
              int mapHeight,
-             ScreenManager screenManager):
+             int screenWidth,
+             int screenHeight):
              mapWidth(mapWidth),
              mapHeight(mapHeight) {
     // We'll initialize the visible clip of the map to be the size
@@ -10,16 +11,15 @@ BgMap::BgMap(int mapWidth,
     // at the center of the map image.  We choose the center clip of
     // the map image so that the user can pan around without hitting
     // the blank edges of the image when the game first loads.
-    SDL_Rect screenRect = screenManager.getScreenRect();
                  
     clip = (SDL_Rect*)malloc(sizeof(SDL_Rect));
-    clip->x = (mapWidth / 2) - (screenRect.w / 2);
-    clip->y = (mapHeight / 2) - (screenRect.h / 2);
-    clip->w = screenRect.w;
-    clip->h = screenRect.h;
+    clip->x = (mapWidth / 2) - (screenWidth / 2);
+    clip->y = (mapHeight / 2) - (screenHeight / 2);
+    clip->w = screenWidth;
+    clip->h = screenHeight;
     
-    SDL_Log("Screen size is (%i, %i)", screenRect.w, screenRect.h);
-    SDL_Log("Background clip is at (%i, %i) size (%i, %i)", clip->x, clip->y, clip->w, clip->h);
+//    SDL_Log("Screen size is (%i, %i)", screenWidth, screenHeight);
+//    SDL_Log("Background clip is at (%i, %i) size (%i, %i)", clip->x, clip->y, clip->w, clip->h);
 }
 
 BgMap::~BgMap() {
@@ -39,7 +39,7 @@ void BgMap::startPan(SDL_Point startPos) {
     startClipPos = {clip->x, clip->y};
     panStopping = false;
     
-    SDL_Log("Start clip position is %i, %i", startClipPos.x, startClipPos.y);
+//    SDL_Log("Start clip position is %i, %i", startClipPos.x, startClipPos.y);
 }
 
 void BgMap::pan(SDL_Point position, SDL_Point prevPosition) {
@@ -48,7 +48,7 @@ void BgMap::pan(SDL_Point position, SDL_Point prevPosition) {
         panVelocity = (float)sqrt(pow(position.x - prevPosition.x, 2) + pow(position.y - prevPosition.y, 2));
         panAngle = atan2(prevPosition.y - position.y, prevPosition.x - position.x);
 
-        SDL_Log("Pan velocity is %f and angle is %f.", panVelocity, panAngle);
+//        SDL_Log("Pan velocity is %f and angle is %f.", panVelocity, panAngle);
     }
     
     if (startClipPos.x - (position.x - startPanPos.x) < 0) {
@@ -82,7 +82,7 @@ void BgMap::stopPan(SDL_Point position) {
         lastPanPos.y = position.y;
     }
     
-    SDL_Log("Stopped pan at (%i, %i)", position.x, position.y);
+//    SDL_Log("Stopped pan at (%i, %i)", position.x, position.y);
 }
 
 void BgMap::updatePosition() {
@@ -92,7 +92,7 @@ void BgMap::updatePosition() {
             float deltaY = panVelocity * cos(panAngle);
             float deltaX = panVelocity * sin(panAngle);
 
-            SDL_Log("Pan velocity %f, deltaX %f, deltaY %f", panVelocity, deltaX, deltaY);
+//            SDL_Log("Pan velocity %f, deltaX %f, deltaY %f", panVelocity, deltaX, deltaY);
 
             // Add that to the existing position
             clip->x -= deltaX;

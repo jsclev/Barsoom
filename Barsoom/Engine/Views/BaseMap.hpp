@@ -2,15 +2,15 @@
 #define BARSOOM_BASE_MAP_H
 
 #include <math.h>
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
-#include "BgMap.hpp"
 #include "constants.hpp"
 #include "ScreenManager.hpp"
 #include "Texture.hpp"
+#include "BgMap.hpp"
 
-class BaseMap
-{
+
+class BaseMap {
 public:
     BaseMap(SDL_Renderer *renderer, ScreenManager screenManager);
     

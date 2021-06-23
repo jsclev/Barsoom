@@ -1,7 +1,7 @@
 #ifndef WATER_RECYCLER_H
 #define WATER_RECYCLER_H
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #include "Building.hpp"
 #include "Texture.hpp"

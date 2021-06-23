@@ -1,5 +1,3 @@
-#include <SDL.h>
-
 #include "BaseMap.hpp"
 
 BaseMap::BaseMap(SDL_Renderer *renderer, ScreenManager screenManager) {
@@ -9,7 +7,8 @@ BaseMap::BaseMap(SDL_Renderer *renderer, ScreenManager screenManager) {
         SDL_Log("Failed to load map image!\n");
     }
     
-    bgMap = new BgMap(texture.getWidth(), texture.getHeight(), screenManager);
+    SDL_Rect screenRect = screenManager.getScreenRect();
+    bgMap = new BgMap(texture.getWidth(), texture.getHeight(), screenRect.w, screenRect.h);
 }
 
 BaseMap::~BaseMap() {

@@ -1,7 +1,8 @@
 #ifndef BARSOOM_TILELAYER_H
 #define BARSOOM_TILELAYER_H
 
-#include <SDL_render.h>
+#include <SDL2/SDL_render.h>
+
 #include "Texture.hpp"
 
 class TileLayer {

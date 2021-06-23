@@ -2,7 +2,7 @@
 #define BG_MAP_H
 
 #include <math.h>
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #include "constants.hpp"
 #include "ScreenManager.hpp"
@@ -10,7 +10,7 @@
 class BgMap
 {
 public:
-    BgMap(int mapWidth, int mapHeight, ScreenManager screenManager);
+    BgMap(int mapWidth, int mapHeight, int screenWidth, int screenHeight);
     
     ~BgMap();
     

@@ -1,7 +1,7 @@
 #ifndef BARSOOM_TILE_H
 #define BARSOOM_TILE_H
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #include <vector>
 
 #include "Texture.hpp"

@@ -1,7 +1,7 @@
 #ifndef SOLAR_FARM_H
 #define SOLAR_FARM_H
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #include "Building.hpp"
 #include "Texture.hpp"

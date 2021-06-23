@@ -1,7 +1,8 @@
 #ifndef BASE_H
 #define BASE_H
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
+
 #include "Tile.hpp"
 
 class Base {

@@ -1,7 +1,7 @@
 #ifndef BARSOOM_TIMER_H
 #define BARSOOM_TIMER_H
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 class Timer
 {

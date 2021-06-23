@@ -1,7 +1,7 @@
 #ifndef REFINERY_H
 #define REFINERY_H
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #include "Building.hpp"
 #include "Texture.hpp"

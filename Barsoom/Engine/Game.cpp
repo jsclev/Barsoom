@@ -79,7 +79,6 @@ int Game::run() {
             SDL_Log("Failed to load media!\n");
             return 1;
         } else {
-//            initMap();
             bool quit = false;
             std::vector<TileLayer> v;
             std::vector<Tile> tiles;

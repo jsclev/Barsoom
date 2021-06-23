@@ -1,7 +1,8 @@
 #ifndef BARSOOM_SCREEN_MANAGER_H
 #define BARSOOM_SCREEN_MANAGER_H
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
+
 #include "constants.hpp"
 
 class ScreenManager

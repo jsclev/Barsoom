@@ -1,7 +1,8 @@
 #ifndef BARSOOM_BUILDING_H
 #define BARSOOM_BUILDING_H
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
+
 #include "Texture.hpp"
 
 using namespace std;

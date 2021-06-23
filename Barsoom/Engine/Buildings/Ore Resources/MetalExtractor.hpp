@@ -1,7 +1,7 @@
 #ifndef METAL_EXTRACTOR_H
 #define METAL_EXTRACTOR_H
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #include "Building.hpp"
 #include "Texture.hpp"

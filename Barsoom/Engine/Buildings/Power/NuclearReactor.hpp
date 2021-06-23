@@ -1,7 +1,7 @@
 #ifndef NUCLEAR_REACTOR_H
 #define NUCLEAR_REACTOR_H
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #include "Building.hpp"
 #include "Texture.hpp"

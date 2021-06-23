@@ -1,7 +1,7 @@
 #ifndef FUSION_REACTOR_H
 #define FUSION_REACTOR_H
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #include "Building.hpp"
 #include "Texture.hpp"

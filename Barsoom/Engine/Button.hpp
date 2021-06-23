@@ -1,7 +1,8 @@
 #ifndef BARSOOM_BUTTON_H
 #define BARSOOM_BUTTON_H
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
+
 #include "Texture.hpp"
 #include "Tile.hpp"
 

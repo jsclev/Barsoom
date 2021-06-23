@@ -6,13 +6,13 @@
 #include <sstream>
 #include <vector>
 
-#include <SDL.h>
-#include <SDL_image.h>
-#include <SDL_ttf.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
+#include <SDL2/SDL_ttf.h>
 
 #include "constants.hpp"
 #include "Base.hpp"
-#include "BaseMap.hpp"
+#include "Views/BaseMap.hpp"
 #include "Building.hpp"
 #include "Button.hpp"
 #include "ElectrolysisPlant.hpp"
