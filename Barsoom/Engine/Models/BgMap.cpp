@@ -18,6 +18,7 @@ BgMap::BgMap(int mapWidth,
     clip->w = screenRect.w;
     clip->h = screenRect.h;
     
+    SDL_Log("Screen size is (%i, %i)", screenRect.w, screenRect.h);
     SDL_Log("Background clip is at (%i, %i) size (%i, %i)", clip->x, clip->y, clip->w, clip->h);
 }
 
