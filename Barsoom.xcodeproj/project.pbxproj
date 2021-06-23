@@ -39,6 +39,10 @@
 		52A226A6265B858800E7208C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A226A5265B858800E7208C /* UIKit.framework */; };
 		52A226A8265B868600E7208C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A226A7265B868600E7208C /* ImageIO.framework */; };
 		52A228D1265C41AB00E7208C /* tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A226B3265B881800E7208C /* tiles.png */; };
+		52B3E2582682EAC000405A2B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52B3E2572682EAC000405A2B /* main.cpp */; };
+		52B3E2762682F33100405A2B /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BC2E4C2682B24000FED476 /* libgtest.a */; };
+		52B3E2772682F33100405A2B /* libgmock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BC2E4B2682B24000FED476 /* libgmock.a */; };
+		52B3E27F26830C8700405A2B /* BgMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52E508EB268050A700ABC60B /* BgMap.cpp */; };
 		52C23D672675CF8500356942 /* buildings_spritesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C23D662675CF8500356942 /* buildings_spritesheet.png */; };
 		52C23D6B2675D5AE00356942 /* NuclearReactor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52C23D692675D5AE00356942 /* NuclearReactor.cpp */; };
 		52C23D702675F4CA00356942 /* HydroponicGreenhouse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52C23D6E2675F4CA00356942 /* HydroponicGreenhouse.cpp */; };
@@ -190,6 +194,18 @@
 			remoteInfo = SDL_ttf;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		52B3E2532682EAC000405A2B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5212D284266B08890022951D /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -373,6 +389,10 @@
 		52A22735265B881800E7208C /* Pigiarniq Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pigiarniq Italic.ttf"; sourceTree = "<group>"; };
 		52A80D50265F2DBD00EEBA1E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		52A80D66265F2DD200EEBA1E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		52B3E2552682EAC000405A2B /* BarsoomTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BarsoomTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B3E2572682EAC000405A2B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		52B3E27A2682F5A100405A2B /* BgMapTests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BgMapTests.cpp; sourceTree = "<group>"; };
+		52B3E27B2682F5A100405A2B /* BgMapTests.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BgMapTests.hpp; sourceTree = "<group>"; };
 		52BC2E4B2682B24000FED476 /* libgmock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgmock.a; path = ../../../../usr/local/lib/libgmock.a; sourceTree = "<group>"; };
 		52BC2E4C2682B24000FED476 /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest.a; path = ../../../../usr/local/lib/libgtest.a; sourceTree = "<group>"; };
 		52C23D662675CF8500356942 /* buildings_spritesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buildings_spritesheet.png; sourceTree = "<group>"; };
@@ -426,6 +446,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		52B3E2522682EAC000405A2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B3E2762682F33100405A2B /* libgtest.a in Frameworks */,
+				52B3E2772682F33100405A2B /* libgmock.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -438,6 +467,7 @@
 				5282B8C4266A0B03008E0F26 /* SDL_ttf.xcodeproj */,
 				5282B88C266A0ACC008E0F26 /* SDL.xcodeproj */,
 				523140E5265A1B1800C5044C /* Barsoom */,
+				52B3E2562682EAC000405A2B /* BarsoomTests */,
 				5231413B265A1C0C00C5044C /* Frameworks */,
 				523140E4265A1B1800C5044C /* Products */,
 			);
@@ -447,6 +477,7 @@
 			isa = PBXGroup;
 			children = (
 				523140E3265A1B1800C5044C /* Barsoom.app */,
+				52B3E2552682EAC000405A2B /* BarsoomTests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -798,6 +829,32 @@
 			path = data;
 			sourceTree = "<group>";
 		};
+		52B3E2562682EAC000405A2B /* BarsoomTests */ = {
+			isa = PBXGroup;
+			children = (
+				52B3E2782682F57700405A2B /* Engine */,
+				52B3E2572682EAC000405A2B /* main.cpp */,
+			);
+			path = BarsoomTests;
+			sourceTree = "<group>";
+		};
+		52B3E2782682F57700405A2B /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				52B3E2792682F57F00405A2B /* Models */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		52B3E2792682F57F00405A2B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52B3E27A2682F5A100405A2B /* BgMapTests.cpp */,
+				52B3E27B2682F5A100405A2B /* BgMapTests.hpp */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		52C23D682675D27000356942 /* Buildings */ = {
 			isa = PBXGroup;
 			children = (
@@ -902,6 +959,23 @@
 			productReference = 523140E3265A1B1800C5044C /* Barsoom.app */;
 			productType = "com.apple.product-type.application";
 		};
+		52B3E2542682EAC000405A2B /* BarsoomTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52B3E2722682EAC000405A2B /* Build configuration list for PBXNativeTarget "BarsoomTests" */;
+			buildPhases = (
+				52B3E2512682EAC000405A2B /* Sources */,
+				52B3E2522682EAC000405A2B /* Frameworks */,
+				52B3E2532682EAC000405A2B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BarsoomTests;
+			productName = BarsoomTests;
+			productReference = 52B3E2552682EAC000405A2B /* BarsoomTests */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -912,6 +986,9 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					523140E2265A1B1800C5044C = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					52B3E2542682EAC000405A2B = {
 						CreatedOnToolsVersion = 12.5;
 					};
 				};
@@ -944,6 +1021,7 @@
 			projectRoot = "";
 			targets = (
 				523140E2265A1B1800C5044C /* Barsoom */,
+				52B3E2542682EAC000405A2B /* BarsoomTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1131,6 +1209,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		52B3E2512682EAC000405A2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B3E2582682EAC000405A2B /* main.cpp in Sources */,
+				52B3E27F26830C8700405A2B /* BgMap.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -1276,11 +1363,7 @@
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
-				HEADER_SEARCH_PATHS = (
-					"/Users/john/projects/SDL/SDL2-2.0.14/include",
-					"/Users/john/projects/SDL/SDL2_image-2.0.5",
-					"/Users/john/projects/SDL/SDL2_ttf-2.0.15",
-				);
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = Barsoom/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1311,11 +1394,7 @@
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
-				HEADER_SEARCH_PATHS = (
-					"/Users/john/projects/SDL/SDL2-2.0.14/include",
-					"/Users/john/projects/SDL/SDL2_image-2.0.5",
-					"/Users/john/projects/SDL/SDL2_ttf-2.0.15",
-				);
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = Barsoom/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1330,6 +1409,34 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		52B3E2592682EAC000405A2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SNJW4KBXLV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		52B3E25A2682EAC000405A2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SNJW4KBXLV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -1350,6 +1457,15 @@
 			buildConfigurations = (
 				52314109265A1B1A00C5044C /* Debug */,
 				5231410A265A1B1A00C5044C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52B3E2722682EAC000405A2B /* Build configuration list for PBXNativeTarget "BarsoomTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B3E2592682EAC000405A2B /* Debug */,
+				52B3E25A2682EAC000405A2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

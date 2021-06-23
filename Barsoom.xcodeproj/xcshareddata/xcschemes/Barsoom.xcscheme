@@ -32,8 +32,8 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "523140F3265A1B1A00C5044C"
-               BuildableName = "BarsoomTests.xctest"
+               BlueprintIdentifier = "52B3E2542682EAC000405A2B"
+               BuildableName = "BarsoomTests"
                BlueprintName = "BarsoomTests"
                ReferencedContainer = "container:Barsoom.xcodeproj">
             </BuildableReference>

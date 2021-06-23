@@ -16,8 +16,8 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "523140F3265A1B1A00C5044C"
-               BuildableName = "BarsoomTests.xctest"
+               BlueprintIdentifier = "52B3E2542682EAC000405A2B"
+               BuildableName = "BarsoomTests"
                BlueprintName = "BarsoomTests"
                ReferencedContainer = "container:Barsoom.xcodeproj">
             </BuildableReference>
@@ -34,6 +34,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "52B3E2542682EAC000405A2B"
+            BuildableName = "BarsoomTests"
+            BlueprintName = "BarsoomTests"
+            ReferencedContainer = "container:Barsoom.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -41,6 +51,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "52B3E2542682EAC000405A2B"
+            BuildableName = "BarsoomTests"
+            BlueprintName = "BarsoomTests"
+            ReferencedContainer = "container:Barsoom.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

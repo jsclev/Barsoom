@@ -1,14 +1,14 @@
-//
-//  main.cpp
-//  BarsoomTests
-//
-//  Created by John Cleveland on 6/23/21.
-//
-
 #include <iostream>
+#include <gtest/gtest.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+#include "BgMap.hpp"
+
+TEST(BgMapTest, ClipStartsEmpty) {
+    BgMap bgMap(0, 0, 0, 0);
+    EXPECT_EQ(false, bgMap.isPanStopping());
+}
+
+int main(int argc, char * argv[]) {
+    testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }

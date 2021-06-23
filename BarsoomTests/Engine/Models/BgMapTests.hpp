@@ -1,13 +1,10 @@
-//
-//  BgMapTests.hpp
-//  BarsoomTests
-//
-//  Created by John Cleveland on 6/23/21.
-//
-
-#ifndef BgMapTests_hpp
-#define BgMapTests_hpp
+#ifndef BG_MAP_TESTS_H
+#define BG_MAP_TESTS_H
 
 #include <stdio.h>
+#include <gtest/gtest.h>
+#include <SDL2/SDL.h>
 
-#endif /* BgMapTests_hpp */
+#include "BgMap.hpp"
+
+#endif
