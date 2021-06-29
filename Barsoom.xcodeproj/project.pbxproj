@@ -211,7 +211,7 @@
 		5212D284266B08890022951D /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		5212D286266B15FC0022951D /* ScreenManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ScreenManager.cpp; sourceTree = "<group>"; };
 		5212D287266B15FC0022951D /* ScreenManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ScreenManager.hpp; sourceTree = "<group>"; };
-		523140E3265A1B1800C5044C /* Barsoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barsoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		523140E3265A1B1800C5044C /* Barsoom-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Barsoom-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		523140EA265A1B1A00C5044C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		523140ED265A1B1A00C5044C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		523140EF265A1B1A00C5044C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -389,10 +389,16 @@
 		52A22735265B881800E7208C /* Pigiarniq Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pigiarniq Italic.ttf"; sourceTree = "<group>"; };
 		52A80D50265F2DBD00EEBA1E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		52A80D66265F2DD200EEBA1E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		52B3E2552682EAC000405A2B /* BarsoomTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BarsoomTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B3E2552682EAC000405A2B /* Barsoom-tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Barsoom-tests"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B3E2572682EAC000405A2B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		52B3E27A2682F5A100405A2B /* BgMapTests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BgMapTests.cpp; sourceTree = "<group>"; };
 		52B3E27B2682F5A100405A2B /* BgMapTests.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BgMapTests.hpp; sourceTree = "<group>"; };
+		52B3E28626844AAF00405A2B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		52B3E29326845A6200405A2B /* libSDL2_ttf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2_ttf.a; path = ../../../../usr/local/Cellar/sdl2_ttf/2.0.15/lib/libSDL2_ttf.a; sourceTree = "<group>"; };
+		52B3E29426845A6200405A2B /* libSDL2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2.a; path = ../../../../usr/local/Cellar/sdl2/2.0.14_1/lib/libSDL2.a; sourceTree = "<group>"; };
+		52B3E29526845A6200405A2B /* libSDL2_image.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2_image.a; path = ../../../../usr/local/Cellar/sdl2_image/2.0.5/lib/libSDL2_image.a; sourceTree = "<group>"; };
+		52B3E29A26845BE600405A2B /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
+		52B3E29B26845BE600405A2B /* SDL_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_ttf.framework; path = ../../../../Library/Frameworks/SDL_ttf.framework; sourceTree = "<group>"; };
 		52BC2E4B2682B24000FED476 /* libgmock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgmock.a; path = ../../../../usr/local/lib/libgmock.a; sourceTree = "<group>"; };
 		52BC2E4C2682B24000FED476 /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest.a; path = ../../../../usr/local/lib/libgtest.a; sourceTree = "<group>"; };
 		52C23D662675CF8500356942 /* buildings_spritesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buildings_spritesheet.png; sourceTree = "<group>"; };
@@ -467,6 +473,7 @@
 				5282B8C4266A0B03008E0F26 /* SDL_ttf.xcodeproj */,
 				5282B88C266A0ACC008E0F26 /* SDL.xcodeproj */,
 				523140E5265A1B1800C5044C /* Barsoom */,
+				52B3E28526844AAF00405A2B /* Barsoom-macOS */,
 				52B3E2562682EAC000405A2B /* BarsoomTests */,
 				5231413B265A1C0C00C5044C /* Frameworks */,
 				523140E4265A1B1800C5044C /* Products */,
@@ -476,8 +483,8 @@
 		523140E4265A1B1800C5044C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				523140E3265A1B1800C5044C /* Barsoom.app */,
-				52B3E2552682EAC000405A2B /* BarsoomTests */,
+				523140E3265A1B1800C5044C /* Barsoom-iOS.app */,
+				52B3E2552682EAC000405A2B /* Barsoom-tests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -507,6 +514,11 @@
 		5231413B265A1C0C00C5044C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52B3E29B26845BE600405A2B /* SDL_ttf.framework */,
+				52B3E29A26845BE600405A2B /* SDL2_image.framework */,
+				52B3E29526845A6200405A2B /* libSDL2_image.a */,
+				52B3E29326845A6200405A2B /* libSDL2_ttf.a */,
+				52B3E29426845A6200405A2B /* libSDL2.a */,
 				52BC2E4B2682B24000FED476 /* libgmock.a */,
 				52BC2E4C2682B24000FED476 /* libgtest.a */,
 				5282B886266A062F008E0F26 /* libSDL2_image.a */,
@@ -855,6 +867,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		52B3E28526844AAF00405A2B /* Barsoom-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				52B3E28626844AAF00405A2B /* main.cpp */,
+			);
+			path = "Barsoom-macOS";
+			sourceTree = "<group>";
+		};
 		52C23D682675D27000356942 /* Buildings */ = {
 			isa = PBXGroup;
 			children = (
@@ -942,9 +962,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		523140E2265A1B1800C5044C /* Barsoom */ = {
+		523140E2265A1B1800C5044C /* Barsoom-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52314108265A1B1A00C5044C /* Build configuration list for PBXNativeTarget "Barsoom" */;
+			buildConfigurationList = 52314108265A1B1A00C5044C /* Build configuration list for PBXNativeTarget "Barsoom-iOS" */;
 			buildPhases = (
 				523140DF265A1B1800C5044C /* Sources */,
 				523140E0265A1B1800C5044C /* Frameworks */,
@@ -954,14 +974,14 @@
 			);
 			dependencies = (
 			);
-			name = Barsoom;
+			name = "Barsoom-iOS";
 			productName = Barsoom;
-			productReference = 523140E3265A1B1800C5044C /* Barsoom.app */;
+			productReference = 523140E3265A1B1800C5044C /* Barsoom-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		52B3E2542682EAC000405A2B /* BarsoomTests */ = {
+		52B3E2542682EAC000405A2B /* Barsoom-tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52B3E2722682EAC000405A2B /* Build configuration list for PBXNativeTarget "BarsoomTests" */;
+			buildConfigurationList = 52B3E2722682EAC000405A2B /* Build configuration list for PBXNativeTarget "Barsoom-tests" */;
 			buildPhases = (
 				52B3E2512682EAC000405A2B /* Sources */,
 				52B3E2522682EAC000405A2B /* Frameworks */,
@@ -971,9 +991,9 @@
 			);
 			dependencies = (
 			);
-			name = BarsoomTests;
+			name = "Barsoom-tests";
 			productName = BarsoomTests;
-			productReference = 52B3E2552682EAC000405A2B /* BarsoomTests */;
+			productReference = 52B3E2552682EAC000405A2B /* Barsoom-tests */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -1020,8 +1040,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				523140E2265A1B1800C5044C /* Barsoom */,
-				52B3E2542682EAC000405A2B /* BarsoomTests */,
+				523140E2265A1B1800C5044C /* Barsoom-iOS */,
+				52B3E2542682EAC000405A2B /* Barsoom-tests */,
 			);
 		};
 /* End PBXProject section */
@@ -1452,7 +1472,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52314108265A1B1A00C5044C /* Build configuration list for PBXNativeTarget "Barsoom" */ = {
+		52314108265A1B1A00C5044C /* Build configuration list for PBXNativeTarget "Barsoom-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52314109265A1B1A00C5044C /* Debug */,
@@ -1461,7 +1481,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52B3E2722682EAC000405A2B /* Build configuration list for PBXNativeTarget "BarsoomTests" */ = {
+		52B3E2722682EAC000405A2B /* Build configuration list for PBXNativeTarget "Barsoom-tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52B3E2592682EAC000405A2B /* Debug */,

@@ -17,8 +17,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "52B3E2542682EAC000405A2B"
-               BuildableName = "BarsoomTests"
-               BlueprintName = "BarsoomTests"
+               BuildableName = "Barsoom-tests"
+               BlueprintName = "Barsoom-tests"
                ReferencedContainer = "container:Barsoom.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -39,8 +39,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "52B3E2542682EAC000405A2B"
-            BuildableName = "BarsoomTests"
-            BlueprintName = "BarsoomTests"
+            BuildableName = "Barsoom-tests"
+            BlueprintName = "Barsoom-tests"
             ReferencedContainer = "container:Barsoom.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -55,8 +55,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "52B3E2542682EAC000405A2B"
-            BuildableName = "BarsoomTests"
-            BlueprintName = "BarsoomTests"
+            BuildableName = "Barsoom-tests"
+            BlueprintName = "Barsoom-tests"
             ReferencedContainer = "container:Barsoom.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
